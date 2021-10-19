@@ -94,66 +94,32 @@ class Attention(nn.Module):
         return output, attn, coverage
 
 
-class SimpleDecoder(torch.nn.Module):
-
-    def __init__(self, configure):
-        super(SimpleDecoder, self).__init__()
-
-        # Declare the hyperparameter
-        self.configure = configure
-
-        # Embedding
-        self.embedding = torch.nn.Embedding(num_embeddings=configure["num_words"],
-                                            embedding_dim=configure["embedding_dim"])
-
-        self.gru = torch.nn.GRU(input_size=configure["embedding_dim"],
-                                hidden_size=configure["hidden_size"],
-                                num_layers=configure["num_layers"],
-                                bidirectional=False,
-                                batch_first=True)
-
-        self.fc = torch.nn.Linear(configure["hidden_size"], configure["num_words"])
-
-    def forward(self, input, hidden):
-        # Embedding
-        embedding = self.embedding(input)
-
-        # Call the GRU
-        out, hidden = self.gru(embedding, hidden)
-
-        out = self.fc(out.view(out.size(0), -1))
-
-        return out, hidden
-
-
 class AttentionDecoder(torch.nn.Module):
 
-    def __init__(self, configure, device):
+    def __init__(self, vocab, hidden_size, num_layers, device):
         super(AttentionDecoder, self).__init__()
 
         # Declare the hyperparameter
-        self.configure = configure
         self.device = device
-        self.configure = configure
 
         # Embedding
-        self.embedding = torch.nn.Embedding(num_embeddings=configure["num_words"],
-                                            embedding_dim=configure["embedding_dim"])
+        self.embedding = torch.nn.Embedding(num_embeddings=vocab,
+                                            embedding_dim=hidden_size)
 
-        self.gru = torch.nn.LSTM(input_size=configure["embedding_dim"] + configure["hidden_size"],
-                                 hidden_size=configure["hidden_size"],
-                                 num_layers=configure["num_layers"],
+        self.gru = torch.nn.LSTM(input_size=hidden_size*2,
+                                 hidden_size=hidden_size,
+                                 num_layers=num_layers,
                                  bidirectional=False,
                                  batch_first=True)
 
-        self.att = Attention(configure["hidden_size"])
+        self.att = Attention(hidden_size)
 
-        self.fc = torch.nn.Linear(configure["hidden_size"], configure["num_words"])
+        self.fc = torch.nn.Linear(hidden_size, vocab)
 
-        self.p = torch.nn.Linear(2 * configure["embedding_dim"] + configure["hidden_size"], 1)
+        self.p = torch.nn.Linear(3 * hidden_size, 1)
         self.sigmoid = torch.nn.Sigmoid()
 
-    def forword_step(self, input, hidden, encoder_output, z, content, coverage, function):
+    def forward(self, vocab, input, hidden, encoder_output, z, content, coverage):
         # Embedding
         embedding = self.embedding(input)
         # print(embedding.squeeze().size())
@@ -168,7 +134,7 @@ class AttentionDecoder(torch.nn.Module):
 
         index = content
         attn = attn.view(attn.size(0), -1)
-        attn_value = torch.zeros([attn.size(0), self.configure["num_words"]]).to(self.device)
+        attn_value = torch.zeros([attn.size(0), vocab]).to(self.device)
         attn_value = attn_value.scatter_(1, index, attn)
 
         out = self.fc(output.view(output.size(0), -1))
@@ -181,71 +147,190 @@ class AttentionDecoder(torch.nn.Module):
         return out, hidden, output, attn, coverage
 
 
-    def forward(self, input, encoder_outputs, encoder_hidden, batch_size, target,
-                function=F.log_softmax, teacher_forcing_ratio=0):
-        decoder_hidden = encoder_hidden
-        z = torch.ones([batch_size, 1, self.config.hidden_size]).to(self.config.device)
-        coverage = torch.zeros([self.config.batch_size, self.config.pad_size]).to(self.config.device)
-
-        use_teacher_forcing = True if random.random() < teacher_forcing_ratio else False
-
-        decoder_outputs = []
-        sequence_symbols = []
-        lengths = np.array([self.config.pad_size] * batch_size)
-
-        def decode(step, step_output, step_attn):
-            decoder_outputs.append(step_output)
-            symbols = decoder_outputs[-1].topk(1)[1]
-            sequence_symbols.append(symbols)
-            eos_batches = symbols.data.eq(self.eos_id)
-            if eos_batches.dim() > 0:
-                eos_batches = eos_batches.cpu().view(-1).numpy()
-                update_idx = ((lengths > step) & eos_batches) != 0
-                lengths[update_idx] = len(sequence_symbols)
-            return symbols
-
-
-        if use_teacher_forcing:
-            decoder_input = input[:, :-1]
-            decoder_output, decoder_hidden, attn = self.forward_step(decoder_input, decoder_hidden, encoder_outputs,
-                                                                     function=function)
-
-            for di in range(decoder_output.size(1)):
-                step_output = decoder_output[:, di, :]
-                if attn is not None:
-                    step_attn = attn[:, di, :]
-                else:
-                    step_attn = None
-                decode(di, step_output, step_attn)
-        else:
-            decoder_input = input[:, 0].unsqueeze(1)
-            for di in range(self.config.pad_size):
-                decoder_output, decoder_hidden, step_attn = self.forward_step(decoder_input, decoder_hidden, encoder_outputs,z,
-                                                                              input, coverage, function=function)
-                step_output = decoder_output.squeeze(1)
-                symbols = decode(di, step_output, step_attn)
-                decoder_input = symbols
-        ret_dict = dict()
-        ret_dict['sequence'] = sequence_symbols
-        return decoder_outputs, decoder_hidden, ret_dict
-
-
 class PointerNet(nn.Module):
     def __init__(self, encoder, decoder, config):
         super(PointerNet, self).__init__()
         self.encoder = encoder
         self.decoder = decoder
         self.config = config
+        self.criterion = torch.nn.CrossEntropyLoss()
+
+    def flatten_parameters(self):
+        self.encoder.gru.flatten_parameters()
+        self.decoder.gru.flatten_parameters()
 
     def forward(self, batch_src, batch_tar=None):
+        batch_size = batch_src[0].size(0)
+        pad_size = batch_src[0].size(1)
+        if batch_tar is not None:
+            target = batch_tar[0]
         encoder_out, encoder_hidden = self.encoder(batch_src[0])
+        decoder_input = torch.tensor([self.config.tokenizer.cls_token_id] * batch_size,
+                                     dtype=torch.long, device=self.config.device).view(batch_size, -1)
+        decoder_hidden = encoder_hidden
+        z = torch.ones([batch_size, 1, self.config.hidden_size]).to(self.config.device)
+        coverage = torch.zeros([batch_size, pad_size]).to(self.config.device)
+        seq_loss = 0
+        step_coverage_loss = 0
+        sentence_symbols = []
+        for i in range(pad_size):
+            decoder_output, decoder_hidden, z, attn, coverage = self.decoder(len(self.config.tokenizer.vocab),decoder_input, decoder_hidden,
+                                                                              encoder_out, z, batch_src[0], coverage)
+            symbols = torch.max(decoder_output, 1)[1].cpu().tolist()
+            sentence_symbols.append(symbols)
+
+            if batch_tar is None or random.randint(1, 10) > 5:
+                _, decoder_input = torch.max(decoder_output, 1)
+                decoder_input = decoder_input.view(batch_size, -1)
+            else:
+                decoder_input = target[:, i].view(batch_size, -1)
+            decoder_hidden = decoder_hidden
+            if batch_tar is not None:
+                step_coverage_loss = torch.sum(torch.min(attn.reshape(-1, 1), coverage.reshape(-1, 1)), 1)
+                step_coverage_loss = torch.sum(step_coverage_loss)
+                seq_loss += (self.criterion(decoder_output, target[:, i]))
+                seq_loss += step_coverage_loss
+
+        return seq_loss, step_coverage_loss, sentence_symbols
 
 
-
-
-
-def build(hidden_size, batch_size):
+def build(hidden_size, batch_size, cuda=True):
     x = import_module('config')
     bert_model = 'hfl/chinese-bert-wwm-ext'
     config = x.Config(batch_size, bert_model)
+
+    train_data = build_dataset(config, './data/train/src_ids.pkl', './data/train/src_masks.pkl',
+                               './data/train/tar_ids.pkl',
+                               './data/train/tar_masks.pkl', './data/train/tar_txts.pkl')
+    test_data = build_dataset(config, './data/test/src_ids.pkl', './data/test/src_masks.pkl',
+                              './data/test/tar_ids.pkl',
+                              './data/test/tar_masks.pkl', './data/test/tar_txts.pkl')
+    val_data = build_dataset(config, './data/valid/src_ids.pkl', './data/valid/src_masks.pkl',
+                             './data/valid/tar_ids.pkl',
+                             './data/valid/tar_masks.pkl', './data/valid/tar_txts.pkl')
+    train_dataloader = build_iterator(train_data, config)
+    val_dataloader = build_iterator(val_data, config)
+    test_dataloader = build_iterator(test_data, config)
+
     encoder = SimpleEncoder(len(config.tokenizer.vocab), hidden_size, config.num_layers)
+    decoder = AttentionDecoder(len(config.tokenizer.vocab), hidden_size, config.num_layers, config.device)
+    encoder = encoder.to(config.device)
+    decoder = decoder.to(config.device)
+
+    pointerNet = PointerNet(encoder, decoder, config)
+    if cuda:
+        pointerNet.cuda()
+    pointerNet = pointerNet.to(config.device)
+    optimizer = torch.optim.Adam(pointerNet.parameters(), lr=config.learning_rate)
+    t_total = int(len(train_data) / config.batch_size * config.num_epochs)
+    scheduler = get_linear_schedule_with_warmup(optimizer,
+                                                num_warmup_steps=int(config.warmup_proportion * t_total),
+                                                num_training_steps=t_total)  # PyTorch scheduler
+
+
+    return pointerNet, optimizer, scheduler, train_dataloader, val_dataloader, test_dataloader, config
+
+
+def decode_sentence(symbols, config):
+    sentences = []
+    for symbol_sen in symbols:
+        words = config.tokenizer.convert_ids_to_tokens(symbol_sen)
+        temp = ''
+        for word in words:
+            if word == '[SEP]':
+                break
+            if word[0] == '#':
+                word = word[2:]
+                temp += word
+            else:
+                temp += word
+        sentences.append(temp)
+    return sentences
+
+
+def eval_set(model, dataloader, config):
+    model.eval()
+    results = []
+    references = []
+
+    for i, (batch_src, batch_tar, batch_tar_txt) in enumerate(dataloader):
+        with torch.no_grad():
+            seq_loss, step_coverage_loss, sentence_symbols = model(batch_src, None)
+            symbols = np.array(sentence_symbols).T
+            sentences = decode_sentence(symbols, config)
+            results += sentences
+            references += batch_tar_txt
+    references = [[u] for u in references]
+    tmp = copy.deepcopy(references)
+    bleu = count_score(results, tmp, config)
+    del tmp
+
+    sentences = []
+    for words in results:
+        tmp = ''
+        for word in words:
+            tmp += word
+        sentences.append(tmp)
+    model.train()
+    return sentences, bleu
+
+
+def train(model, optimizer, scheduler, train_dataloader, val_dataloader, test_dataloader, config):
+    #training steps
+    max_bleu = -99999
+    save_file = {}
+    for e in range(config.num_epochs):
+        model.train()
+        for i, (batch_src, batch_tar, batch_tar_txt) in tqdm(enumerate(train_dataloader)):
+            # words_1 = ''.join(config.tokenizer.convert_ids_to_tokens(batch_src[0][0]))
+            # words_2 = ''.join(config.tokenizer.convert_ids_to_tokens(batch_tar[0][0]))
+            seq_loss, step_coverage_loss, sentence_symbols = model(batch_src, batch_tar)
+
+            seq_loss.backward()
+            optimizer.step()
+            scheduler.step()
+            optimizer.zero_grad()
+
+            if i % 50 == 0:
+                # print('sample:')
+                # print(words_1)
+                # print(words_2)
+                print('train loss:%f' %(seq_loss.item()/len(batch_src[0][0])/len(batch_src[0])))
+
+
+        if e >= 0:
+            val_results, bleu = eval_set(model, val_dataloader, config)
+            print(val_results[0:5])
+            print('BLEU:%f' %(bleu))
+            if bleu > max_bleu:
+                max_bleu = bleu
+                save_file['epoch'] = e + 1
+                save_file['para'] = model.state_dict()
+                save_file['best_bleu'] = bleu
+                torch.save(save_file, './cache/best_save.data')
+            if bleu < max_bleu - 0.6:
+                print('Early Stop')
+                break
+            print(save_file['epoch'] - 1)
+
+
+    save_file_best = torch.load('./cache/best_save.data')
+    print('Train finished')
+    print('Best Val BLEU:%f' %(save_file_best['best_bleu']))
+    model.load_state_dict(save_file_best['para'])
+    test_results, bleu = eval_set(model, test_dataloader, config)
+    print('Test BLEU:%f' % (bleu))
+    with open('./result/best_save_bert.out.txt', 'w', encoding="utf-8") as f:
+        f.writelines([x + '\n' for x in test_results])
+    return bleu
+
+def main():
+    seq2seq, optimizer,scheduler, train_dataloader, val_dataloader, test_dataloader, config = build(256, 128, True)
+    bleu = train(seq2seq, optimizer, scheduler, train_dataloader, val_dataloader, test_dataloader, config)
+    print('finish')
+
+
+if __name__ == '__main__':
+    import os
+    os.environ['CUDA_VISIBLE_DEVICES'] = '0'
+    main()

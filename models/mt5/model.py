@@ -54,7 +54,7 @@ def eval_set(model, dataloader, config):
 
     for i, (batch_src, batch_tar, batch_tar_txt) in enumerate(tqdm(dataloader)):
         with torch.no_grad():
-            outputs = model.generate(input_ids=batch_src[0],attention_mask=batch_src[2],do_sample=False,max_length=config.pad_size)
+            outputs = model.generate(input_ids=batch_src[0],attention_mask=batch_src[2],do_sample=False,max_length=config.pad_size*2)
             results += config.tokenizer.batch_decode(outputs,skip_special_tokens=True)
             references += batch_tar_txt
 
