@@ -153,7 +153,7 @@ class AttentionDecoder(torch.nn.Module):
         self.p = torch.nn.Linear(2 * configure["embedding_dim"] + configure["hidden_size"], 1)
         self.sigmoid = torch.nn.Sigmoid()
 
-    def forward(self, input, hidden, encoder_output, z, content, coverage):
+    def forword_step(self, input, hidden, encoder_output, z, content, coverage, function):
         # Embedding
         embedding = self.embedding(input)
         # print(embedding.squeeze().size())
@@ -181,6 +181,55 @@ class AttentionDecoder(torch.nn.Module):
         return out, hidden, output, attn, coverage
 
 
+    def forward(self, input, encoder_outputs, encoder_hidden, batch_size, target,
+                function=F.log_softmax, teacher_forcing_ratio=0):
+        decoder_hidden = encoder_hidden
+        z = torch.ones([batch_size, 1, self.config.hidden_size]).to(self.config.device)
+        coverage = torch.zeros([self.config.batch_size, self.config.pad_size]).to(self.config.device)
+
+        use_teacher_forcing = True if random.random() < teacher_forcing_ratio else False
+
+        decoder_outputs = []
+        sequence_symbols = []
+        lengths = np.array([self.config.pad_size] * batch_size)
+
+        def decode(step, step_output, step_attn):
+            decoder_outputs.append(step_output)
+            symbols = decoder_outputs[-1].topk(1)[1]
+            sequence_symbols.append(symbols)
+            eos_batches = symbols.data.eq(self.eos_id)
+            if eos_batches.dim() > 0:
+                eos_batches = eos_batches.cpu().view(-1).numpy()
+                update_idx = ((lengths > step) & eos_batches) != 0
+                lengths[update_idx] = len(sequence_symbols)
+            return symbols
+
+
+        if use_teacher_forcing:
+            decoder_input = input[:, :-1]
+            decoder_output, decoder_hidden, attn = self.forward_step(decoder_input, decoder_hidden, encoder_outputs,
+                                                                     function=function)
+
+            for di in range(decoder_output.size(1)):
+                step_output = decoder_output[:, di, :]
+                if attn is not None:
+                    step_attn = attn[:, di, :]
+                else:
+                    step_attn = None
+                decode(di, step_output, step_attn)
+        else:
+            decoder_input = input[:, 0].unsqueeze(1)
+            for di in range(self.config.pad_size):
+                decoder_output, decoder_hidden, step_attn = self.forward_step(decoder_input, decoder_hidden, encoder_outputs,z,
+                                                                              input, coverage, function=function)
+                step_output = decoder_output.squeeze(1)
+                symbols = decode(di, step_output, step_attn)
+                decoder_input = symbols
+        ret_dict = dict()
+        ret_dict['sequence'] = sequence_symbols
+        return decoder_outputs, decoder_hidden, ret_dict
+
+
 class PointerNet(nn.Module):
     def __init__(self, encoder, decoder, config):
         super(PointerNet, self).__init__()
@@ -191,10 +240,7 @@ class PointerNet(nn.Module):
     def forward(self, batch_src, batch_tar=None):
         encoder_out, encoder_hidden = self.encoder(batch_src[0])
 
-        decoder_input = torch.tensor([101] * len(batch_src[0]), dtype=torch.long, device=self.config.device).view(len(batch_src[0]), -1)
-        decoder_hidden = encoder_hidden
-        z = torch.ones([len(batch_src[0]),1,self.config.hidden_size]).to(self.config.device)
-        coverage = torch.zeros([self.config.batch_size,self.config.pad_size]).to(self.config.device)
+
 
 
 

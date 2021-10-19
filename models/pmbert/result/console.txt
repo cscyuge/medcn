@@ -1,0 +1,2386 @@
+E:\ljx\medcn-s2s\venv\Scripts\python.exe E:/ljx/medcn/models/pmbert/model.py
+Some weights of the model checkpoint at hfl/chinese-bert-wwm-ext were not used when initializing BertModel: ['cls.predictions.decoder.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform
+.dense.weight', 'cls.seq_relationship.weight', 'cls.predictions.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+E:\ljx\medcn-s2s\venv\lib\site-packages\torch\nn\modules\rnn.py:61: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.2 and num_layers=1
+"num_layers={}".format(dropout, num_layers))
+E:\ljx\medcn-s2s\venv\lib\site-packages\torch\nn\_reduction.py:44: UserWarning: size_average and reduce args will be deprecated, please use reduction='none' instead.
+warnings.warn(warning.format(ret))
+0it [00:00, ?it/s]E:\ljx\medcn-s2s\venv\lib\site-packages\torch\nn\functional.py:1628: UserWarning: nn.functional.tanh is deprecated. Use torch.tanh instead.
+warnings.warn("nn.functional.tanh is deprecated. Use torch.tanh instead.")
+1it [00:01, 1.82s/it]train loss:9.961118
+51it [00:23, 2.33it/s]train loss:9.953979
+101it [00:45, 2.36it/s]train loss:9.954697
+151it [01:06, 2.41it/s]train loss:9.933312
+201it [01:27, 2.26it/s]train loss:9.909176
+251it [01:48, 2.47it/s]train loss:9.862244
+301it [02:07, 2.50it/s]train loss:9.782233
+351it [02:27, 2.46it/s]train loss:9.679473
+401it [02:46, 2.66it/s]train loss:9.549373
+451it [03:05, 2.63it/s]train loss:9.503324
+501it [03:24, 2.60it/s]train loss:9.382004
+551it [03:42, 2.87it/s]train loss:9.065257
+601it [04:00, 2.78it/s]train loss:8.918964
+651it [04:17, 3.12it/s]train loss:8.920547
+701it [04:33, 3.15it/s]train loss:8.437319
+751it [04:49, 3.27it/s]train loss:8.511691
+801it [05:03, 3.96it/s]train loss:8.304272
+851it [05:17, 3.39it/s]train loss:7.783516
+901it [05:28, 4.27it/s]train loss:7.531488
+925it [05:32, 2.78it/s]
+['', '', '', '', '']
+BLEU:0.000000
+0
+1it [00:00, 2.20it/s]train loss:7.947695
+51it [00:23, 2.20it/s]train loss:7.680772
+101it [00:45, 2.27it/s]train loss:7.418735
+151it [01:06, 2.36it/s]train loss:7.359982
+201it [01:27, 2.38it/s]train loss:7.034620
+251it [01:48, 2.34it/s]train loss:7.050256
+301it [02:08, 2.49it/s]train loss:6.913068
+351it [02:28, 2.50it/s]train loss:6.731512
+401it [02:47, 2.65it/s]train loss:6.789486
+451it [03:06, 2.75it/s]train loss:6.643679
+501it [03:25, 2.72it/s]train loss:6.585614
+551it [03:43, 2.68it/s]train loss:6.601614
+601it [04:00, 2.76it/s]train loss:6.679731
+651it [04:17, 3.16it/s]train loss:6.515082
+701it [04:34, 2.93it/s]train loss:6.513180
+751it [04:50, 3.32it/s]train loss:6.551378
+801it [05:04, 4.03it/s]train loss:6.605161
+851it [05:18, 3.09it/s]train loss:6.570192
+901it [05:30, 4.15it/s]train loss:6.510817
+925it [05:34, 2.77it/s]
+['', '', '', '', '']
+BLEU:0.000000
+0
+1it [00:00, 2.04it/s]train loss:6.658503
+51it [00:23, 2.32it/s]train loss:6.603645
+101it [00:44, 2.36it/s]train loss:6.472724
+151it [01:05, 2.43it/s]train loss:6.613426
+201it [01:26, 2.26it/s]train loss:6.525589
+251it [01:47, 2.45it/s]train loss:6.581050
+301it [02:06, 2.54it/s]train loss:6.607292
+351it [02:26, 2.56it/s]train loss:6.447768
+401it [02:46, 2.65it/s]train loss:6.533098
+451it [03:04, 2.79it/s]train loss:6.427219
+501it [03:23, 2.61it/s]train loss:6.390174
+551it [03:41, 2.79it/s]train loss:6.430408
+601it [03:59, 2.79it/s]train loss:6.513997
+651it [04:15, 3.19it/s]train loss:6.353721
+701it [04:32, 2.98it/s]train loss:6.369030
+751it [04:47, 3.27it/s]train loss:6.396265
+801it [05:02, 3.95it/s]train loss:6.432936
+851it [05:15, 3.20it/s]train loss:6.396381
+901it [05:27, 4.11it/s]train loss:6.304090
+925it [05:31, 2.79it/s]
+E:\ljx\medcn-s2s\venv\lib\site-packages\nltk\translate\bleu_score.py:516: UserWarning:
+The hypothesis contains 0 counts of 2-gram overlaps.
+Therefore the BLEU score evaluates to 0, independently of
+how many N-gram overlaps of lower order it contains.
+Consider using lower n-gram order or use SmoothingFunction()
+warnings.warn(_msg)
+E:\ljx\medcn-s2s\venv\lib\site-packages\nltk\translate\bleu_score.py:516: UserWarning:
+The hypothesis contains 0 counts of 3-gram overlaps.
+Therefore the BLEU score evaluates to 0, independently of
+how many N-gram overlaps of lower order it contains.
+Consider using lower n-gram order or use SmoothingFunction()
+warnings.warn(_msg)
+E:\ljx\medcn-s2s\venv\lib\site-packages\nltk\translate\bleu_score.py:516: UserWarning:
+The hypothesis contains 0 counts of 4-gram overlaps.
+Therefore the BLEU score evaluates to 0, independently of
+how many N-gram overlaps of lower order it contains.
+Consider using lower n-gram order or use SmoothingFunction()
+warnings.warn(_msg)
+['', '', '', '', '']
+BLEU:0.000000
+2
+1it [00:00, 1.99it/s]train loss:6.988866
+51it [00:23, 2.15it/s]train loss:6.469549
+101it [00:45, 2.24it/s]train loss:6.319943
+151it [01:06, 2.41it/s]train loss:6.463465
+201it [01:27, 2.43it/s]train loss:6.368545
+251it [01:48, 2.34it/s]train loss:6.350721
+301it [02:08, 2.53it/s]train loss:6.426447
+351it [02:28, 2.55it/s]train loss:6.258375
+401it [02:48, 2.67it/s]train loss:6.361831
+451it [03:07, 2.65it/s]train loss:6.193985
+501it [03:26, 2.62it/s]train loss:6.115704
+551it [03:44, 2.81it/s]train loss:6.187425
+601it [04:02, 2.63it/s]train loss:6.112424
+651it [04:19, 3.22it/s]train loss:6.060530
+701it [04:35, 2.78it/s]train loss:6.078569
+751it [04:51, 3.25it/s]train loss:6.015439
+801it [05:06, 3.90it/s]train loss:6.013381
+851it [05:20, 3.44it/s]train loss:5.981051
+901it [05:31, 4.28it/s]train loss:5.903729
+925it [05:34, 2.76it/s]
+['', '', '', '', '']
+BLEU:0.000272
+3
+1it [00:00, 2.17it/s]train loss:7.940860
+51it [00:23, 2.18it/s]train loss:6.216287
+101it [00:45, 2.26it/s]train loss:6.035188
+151it [01:06, 2.34it/s]train loss:6.197176
+201it [01:27, 2.38it/s]train loss:6.070368
+251it [01:48, 2.45it/s]train loss:5.978755
+301it [02:09, 2.40it/s]train loss:6.070695
+351it [02:29, 2.39it/s]train loss:5.812737
+401it [02:49, 2.58it/s]train loss:5.929706
+451it [03:08, 2.62it/s]train loss:5.649570
+501it [03:27, 2.59it/s]train loss:5.587383
+551it [03:45, 2.74it/s]train loss:5.698891
+601it [04:03, 2.60it/s]train loss:5.562876
+651it [04:20, 3.21it/s]train loss:5.513917
+701it [04:36, 2.91it/s]train loss:5.653869
+751it [04:52, 3.25it/s]train loss:5.422522
+801it [05:07, 3.88it/s]train loss:5.433237
+851it [05:21, 3.30it/s]train loss:5.470483
+901it [05:32, 4.20it/s]train loss:5.424258
+925it [05:36, 2.75it/s]
+['方法:对例患者', '这病病是', '【文,有有患者', '本文对我病病', '结结为,,患者']
+BLEU:0.001066
+4
+1it [00:00, 2.04it/s]train loss:7.437529
+51it [00:23, 2.27it/s]train loss:6.068907
+101it [00:45, 2.30it/s]train loss:5.849549
+151it [01:06, 2.30it/s]train loss:5.808877
+201it [01:28, 2.33it/s]train loss:5.783977
+251it [01:49, 2.41it/s]train loss:5.648228
+301it [02:09, 2.52it/s]train loss:5.703319
+351it [02:29, 2.46it/s]train loss:5.347180
+401it [02:49, 2.64it/s]train loss:5.637070
+451it [03:08, 2.69it/s]train loss:5.291621
+501it [03:27, 2.58it/s]train loss:5.007922
+551it [03:45, 2.77it/s]train loss:5.382327
+601it [04:04, 2.66it/s]train loss:5.026226
+651it [04:21, 3.20it/s]train loss:5.118469
+701it [04:38, 2.83it/s]train loss:4.955982
+751it [04:53, 3.25it/s]train loss:4.776450
+801it [05:08, 3.87it/s]train loss:4.794440
+851it [05:21, 3.34it/s]train loss:4.877671
+901it [05:33, 4.19it/s]train loss:4.746307
+925it [05:37, 2.74it/s]
+['方法:对例例例患病', '这这病是是过症的', '要要不不了有有的', '本文对我们为结病', '结结果率为是不患']
+BLEU:0.005619
+5
+1it [00:00, 2.23it/s]train loss:7.439262
+51it [00:23, 2.23it/s]train loss:5.597453
+101it [00:45, 2.27it/s]train loss:5.528521
+151it [01:06, 2.32it/s]train loss:5.388813
+201it [01:27, 2.37it/s]train loss:5.447368
+251it [01:48, 2.38it/s]train loss:4.998769
+301it [02:09, 2.42it/s]train loss:5.041831
+351it [02:29, 2.43it/s]train loss:4.804661
+401it [02:48, 2.64it/s]train loss:4.906811
+451it [03:07, 2.60it/s]train loss:4.517910
+501it [03:26, 2.69it/s]train loss:4.662072
+551it [03:43, 2.70it/s]train loss:4.667963
+601it [04:01, 2.60it/s]train loss:4.473055
+651it [04:18, 3.18it/s]train loss:4.348795
+701it [04:35, 3.00it/s]train loss:4.719756
+751it [04:51, 3.20it/s]train loss:4.130958
+801it [05:05, 3.91it/s]train loss:4.174015
+851it [05:19, 3.42it/s]train loss:4.247717
+901it [05:30, 4.23it/s]train loss:4.226895
+925it [05:34, 2.77it/s]
+['方法:对分例的患病', '这病病是过症状的的', '是通不查有有一', '本文对我发结病病发病', '结结果较常常可患者']
+BLEU:0.007080
+0it [00:00, ?it/s]6
+1it [00:00, 2.00it/s]train loss:6.854881
+51it [00:23, 2.19it/s]train loss:5.258720
+101it [00:44, 2.36it/s]train loss:5.231796
+151it [01:05, 2.26it/s]train loss:4.884422
+201it [01:26, 2.29it/s]train loss:4.574154
+251it [01:47, 2.39it/s]train loss:4.499355
+301it [02:07, 2.44it/s]train loss:4.416416
+351it [02:27, 2.55it/s]train loss:4.693417
+401it [02:46, 2.68it/s]train loss:4.800939
+451it [03:05, 2.61it/s]train loss:4.252364
+501it [03:24, 2.68it/s]train loss:4.187875
+551it [03:43, 2.79it/s]train loss:4.489151
+601it [04:01, 2.65it/s]train loss:3.921331
+651it [04:17, 3.25it/s]train loss:3.826364
+701it [04:34, 2.81it/s]train loss:3.766110
+751it [04:49, 3.27it/s]train loss:3.497525
+801it [05:04, 3.88it/s]train loss:3.538462
+851it [05:18, 3.27it/s]train loss:3.704088
+901it [05:29, 4.29it/s]train loss:3.744083
+925it [05:33, 2.77it/s]
+['方法:随对例例耳鸣患的病可查进', '这些病是通过症状诊的治症，是', '但通定期查在有了证有症患，以的瘤的瘤', '本文对人高共结结病疫以及对病', '结结果较常重时大患者来,皮的']
+BLEU:0.035154
+7
+1it [00:00, 2.22it/s]train loss:6.383391
+51it [00:23, 2.24it/s]train loss:5.186735
+101it [00:45, 2.20it/s]train loss:4.355523
+151it [01:07, 2.39it/s]train loss:4.869800
+201it [01:28, 2.24it/s]train loss:4.014831
+251it [01:49, 2.39it/s]train loss:4.557152
+301it [02:09, 2.55it/s]train loss:3.883340
+351it [02:29, 2.43it/s]train loss:3.674622
+401it [02:48, 2.67it/s]train loss:4.400289
+451it [03:07, 2.70it/s]train loss:3.805738
+501it [03:26, 2.68it/s]train loss:3.595773
+551it [03:44, 2.69it/s]train loss:3.571833
+601it [04:02, 2.72it/s]train loss:3.435638
+651it [04:19, 3.29it/s]train loss:3.751138
+701it [04:36, 2.76it/s]train loss:3.264948
+751it [04:51, 3.21it/s]train loss:2.948451
+801it [05:06, 3.84it/s]train loss:2.883978
+851it [05:20, 3.38it/s]train loss:3.201742
+901it [05:32, 4.20it/s]train loss:3.210013
+925it [05:36, 2.75it/s]
+['方法:随机对例鸣鸣患的肠病患及素进,', '这些病病是过症状诊的，治疗的，是种病方的的', '需需定期查查有已证实有症的患人，相关，（（（（（））））））））））））））））））））））））））））））））））））））））', '本文对我国高结核病疫现状及大对结、和治疗中', '肾结结较为常时大两患者体痛,皮的下']
+BLEU:0.103531
+8
+1it [00:00, 2.29it/s]train loss:6.222459
+51it [00:22, 2.27it/s]train loss:4.507594
+101it [00:44, 2.32it/s]train loss:3.872177
+151it [01:06, 2.38it/s]train loss:4.521758
+201it [01:27, 2.25it/s]train loss:3.370594
+251it [01:48, 2.40it/s]train loss:4.069909
+301it [02:08, 2.42it/s]train loss:3.306064
+351it [02:29, 2.46it/s]train loss:3.088428
+401it [02:48, 2.56it/s]train loss:3.202019
+451it [03:07, 2.69it/s]train loss:2.756439
+501it [03:26, 2.58it/s]train loss:2.630738
+551it [03:44, 2.66it/s]train loss:3.126619
+601it [04:02, 2.71it/s]train loss:2.960854
+651it [04:19, 3.14it/s]train loss:2.810653
+701it [04:35, 2.80it/s]train loss:2.804865
+751it [04:51, 3.34it/s]train loss:2.470342
+801it [05:06, 3.89it/s]train loss:2.370081
+851it [05:19, 3.33it/s]train loss:2.852239
+901it [05:31, 4.16it/s]train loss:2.826804
+925it [05:34, 2.76it/s]
+['方法:随机对例耳鸣患者的肠系病情及生进行,应患者的研究患者进', '这些疾病是通过症状的，治疗主要的，但及病学方方对的的生状症状的', '需需定期查查有已证实具有变的患者，以是相关状（（（（瘤瘤瘤瘤瘤瘤瘤瘤瘤瘤瘤瘤瘤瘤瘤瘤瘤瘤瘤瘤瘤瘤瘤瘤瘤瘤瘤瘤瘤瘤瘤瘤瘤瘤瘤瘤瘤瘤', '本文对我国高结核病疫情现以及大生对结、和水平中的作用中的应用中的进行述进行述中的进行述进行述中的进行述进行述进行述中的进行述进行', '肾结石较为常重时给患者来近痛,气气的痛、,后患者的痛,痛患者的的的,痛患者,痛的者,痛的患者,痛的者,痛的患者,痛的者,痛的者的']
+BLEU:0.161504
+9
+1it [00:00, 2.00it/s]train loss:5.738069
+51it [00:23, 2.23it/s]train loss:4.564256
+101it [00:45, 2.20it/s]train loss:3.290736
+151it [01:06, 2.26it/s]train loss:3.160911
+201it [01:28, 2.28it/s]train loss:2.782085
+251it [01:49, 2.46it/s]train loss:3.758435
+301it [02:08, 2.50it/s]train loss:3.666209
+351it [02:28, 2.55it/s]train loss:3.433220
+401it [02:47, 2.62it/s]train loss:2.816072
+451it [03:06, 2.67it/s]train loss:2.918741
+501it [03:25, 2.61it/s]train loss:2.139668
+551it [03:42, 2.86it/s]train loss:3.267026
+601it [04:01, 2.74it/s]train loss:3.097907
+651it [04:17, 3.24it/s]train loss:2.917744
+701it [04:34, 2.95it/s]train loss:2.839913
+751it [04:50, 3.25it/s]train loss:2.140785
+801it [05:04, 3.86it/s]train loss:1.987839
+851it [05:18, 3.54it/s]train loss:2.413022
+901it [05:29, 4.33it/s]train loss:2.541392
+925it [05:33, 2.78it/s]
+['方法:机对-例耳鸣患者的肠系病患病情调查,与表', '这些病是通过症状诊断的，治主要对症的，但及生的相对', '需定定查查所有已证实具有死的患者及人，相关的（（（，（（，（），））））））））））））））））））））））））））））））））', '本文对我国高结核病疫情现状及高大学生对的、、动在结中的中的中述中的中述中的中', '肾结石为严重时会给患者来近多痛,例的腰痛中发生的患者的,患者的了患者的,']
+BLEU:0.185143
+10
+1it [00:00, 2.02it/s]train loss:5.879077
+51it [00:23, 2.25it/s]train loss:4.295241
+101it [00:45, 2.31it/s]train loss:3.872374
+151it [01:06, 2.34it/s]train loss:3.883358
+201it [01:27, 2.24it/s]train loss:2.500359
+251it [01:48, 2.35it/s]train loss:2.728070
+301it [02:08, 2.40it/s]train loss:2.455420
+351it [02:28, 2.51it/s]train loss:2.972588
+401it [02:48, 2.69it/s]train loss:3.297670
+451it [03:07, 2.74it/s]train loss:2.561414
+501it [03:25, 2.72it/s]train loss:2.244179
+551it [03:43, 2.89it/s]train loss:2.811305
+601it [04:01, 2.74it/s]train loss:2.287370
+651it [04:18, 3.26it/s]train loss:2.474500
+701it [04:35, 2.77it/s]train loss:2.166982
+751it [04:50, 3.23it/s]train loss:2.292648
+801it [05:05, 3.97it/s]train loss:1.692125
+851it [05:18, 3.36it/s]train loss:2.148260
+901it [05:30, 4.19it/s]train loss:2.405969
+925it [05:34, 2.77it/s]
+['方法:随机对-例耳鸣患者的肠系病患病情及生调,应用量表进行患者的患者的患者者患者的患者的患者者患者的患者者者患者的患者者患者的患', '这些疾病是通过症状诊的，治疗主要是，但是及病的分子的相，其对症状的的症状的的症状的的症状的症状的的症状的的症状的的症状的的症状的', '需需需期查查所有已证实有突变的患者及人，可关的肿瘤（（（（（（，瘤（（（（（（）（（）（（）（（）（（）（（）（（）（（）（（）', '本文对我国高回结核病疫情现以及高大学生结核病和行为水病防治中的应的的治中的应的治中的应的治疗的的的的的的治中的应的的治中的应的治', '肾结石较为严重时会给患者来近痛,例如便的腰痛、,,,,患者的者,患者的,患者的,患者的,患者的,患者的,
+患者的,患者的,患者的,']
+BLEU:0.306502
+11
+1it [00:00, 2.27it/s]train loss:5.989183
+51it [00:23, 2.30it/s]train loss:4.110742
+101it [00:45, 2.23it/s]train loss:2.393513
+151it [01:06, 2.35it/s]train loss:3.536258
+201it [01:27, 2.31it/s]train loss:3.709337
+251it [01:48, 2.31it/s]train loss:2.363639
+301it [02:08, 2.53it/s]train loss:2.117296
+351it [02:28, 2.39it/s]train loss:1.931473
+401it [02:48, 2.56it/s]train loss:2.068204
+451it [03:07, 2.61it/s]train loss:1.696877
+501it [03:26, 2.65it/s]train loss:1.903447
+551it [03:44, 2.80it/s]train loss:2.657161
+601it [04:02, 2.59it/s]train loss:2.071130
+651it [04:19, 3.18it/s]train loss:2.273645
+701it [04:36, 2.99it/s]train loss:2.372924
+751it [04:52, 3.34it/s]train loss:1.611398
+801it [05:06, 4.16it/s]train loss:1.433228
+851it [05:20, 3.22it/s]train loss:1.857684
+901it [05:31, 4.36it/s]train loss:2.109545
+925it [05:35, 2.76it/s]
+['方法:随机对4例耳鸣患者的肠系疾病患病情及生调查,应量表进行患者的患者的的', '这些疾病是通过症状诊断的，治疗主要的，但是可及病的知识，我们的症状的的症状的的症状的的症状的的症状的的的症状的的的症状的的的症状', '需需定期查查所有已证实具有高的患者及人，以需相关的，因（（瘤，瘤瘤瘤，瘤瘤瘤，瘤瘤瘤（，瘤瘤瘤（瘤，瘤瘤瘤（瘤，瘤瘤瘤（瘤，瘤瘤', '本文对我国高校结核病疫情现状以及大学生对结核病的的与治疗', '肾结石较为严重时会给患者来近多痛,例便的腰腹痛、,痛的患者的的']
+BLEU:0.355687
+12
+1it [00:00, 1.97it/s]train loss:5.839443
+51it [00:23, 2.13it/s]train loss:2.488488
+101it [00:45, 2.23it/s]train loss:2.007671
+151it [01:07, 2.37it/s]train loss:3.340983
+201it [01:28, 2.21it/s]train loss:1.753535
+251it [01:49, 2.43it/s]train loss:3.061423
+301it [02:10, 2.54it/s]train loss:1.876371
+351it [02:30, 2.42it/s]train loss:1.679572
+401it [02:49, 2.53it/s]train loss:1.882924
+451it [03:08, 2.67it/s]train loss:1.971331
+501it [03:27, 2.72it/s]train loss:1.753698
+551it [03:45, 2.64it/s]train loss:2.027873
+601it [04:03, 2.59it/s]train loss:1.896901
+651it [04:20, 3.11it/s]train loss:1.723062
+701it [04:37, 2.75it/s]train loss:1.828219
+751it [04:53, 3.21it/s]train loss:1.469998
+801it [05:07, 3.98it/s]train loss:1.268796
+851it [05:21, 3.25it/s]train loss:1.733801
+901it [05:33, 4.27it/s]train loss:1.941094
+925it [05:37, 2.74it/s]
+['方法:随机对-例耳鸣患者的肠系疾病患病情及生活进行的的的患者的的患者进行对者进行者进行对者进行者进行者进行者进行者进行者进行者进', '这些疾病是通过症状诊的，治疗主要是对症的，但与病毒的的的相对，我们对的制的的制的制的制的制的制的制的制的制的制的制的制的制的制的', '必必定期查查所有已证实具有变的患者及人，以建相关的肿瘤，传细胞，（瘤瘤（瘤（瘤瘤（瘤瘤瘤瘤（瘤瘤瘤瘤瘤瘤瘤瘤瘤瘤瘤瘤瘤瘤瘤瘤瘤瘤', '本文对我国高校结核病疫现状以及高大学生对结核病的认为水平在结核病治中的应用中的应用中的应用中的应用中的应用中的应用中的应用中的应', '肾结石较为严重时会给患者来近多痛,例如饮的腰痛等,,
+常痛中的者的者的者的者来了者的者的者来了者的者的者的者来了者的者的者的者来了']
+BLEU:0.332073
+12
+1it [00:00, 1.99it/s]train loss:5.295197
+51it [00:23, 2.21it/s]train loss:2.158364
+101it [00:44, 2.28it/s]train loss:1.733874
+151it [01:06, 2.30it/s]train loss:1.773256
+201it [01:27, 2.33it/s]train loss:3.094376
+251it [01:48, 2.43it/s]train loss:2.739196
+301it [02:08, 2.59it/s]train loss:2.196256
+351it [02:28, 2.42it/s]train loss:1.500988
+401it [02:48, 2.55it/s]train loss:2.391600
+451it [03:07, 2.61it/s]train loss:1.826010
+501it [03:26, 2.53it/s]train loss:1.199656
+551it [03:44, 2.70it/s]train loss:1.815197
+601it [04:02, 2.65it/s]train loss:1.740006
+651it [04:19, 3.29it/s]train loss:1.988650
+701it [04:35, 2.97it/s]train loss:2.066813
+751it [04:51, 3.23it/s]train loss:1.293897
+801it [05:05, 4.12it/s]train loss:1.121548
+851it [05:19, 3.18it/s]train loss:1.605648
+901it [05:31, 4.17it/s]train loss:1.711081
+925it [05:34, 2.76it/s]
+['方法:随机对4例耳鸣患者的肠系疾病患病情及生活病病病的病病病的病功能并与健康进行对照的人进行对照的人进行对照的人进行对照的人进行', '这些疾病是通过症状诊的，治疗主要是对症的，但的的的的的的的的的的的的的的响很差症状的机制的理很差症状的机制的理很差症状的机制的的', '必必定期筛查所有已证实具有变的患者及其国，以是是是是是是是是的是的的肌瘤（瘤（瘤（瘤（瘤（瘤瘤（瘤瘤（瘤瘤（瘤瘤（瘤瘤（瘤瘤（瘤', '本文对我国高校结核病疫现状以及高校学生对结核病病病的病病病防治作中的应用', '肾结石较为严重时会给患者来近多痛,例如失的腰痛等,或者,给痛,患者的生活来了患者的生活来了患者的生活来了患者的生活来了患者的生活']
+BLEU:0.349681
+12
+1it [00:00, 2.01it/s]train loss:4.668191
+51it [00:23, 2.24it/s]train loss:3.422093
+101it [00:45, 2.21it/s]train loss:2.874733
+151it [01:07, 2.32it/s]train loss:2.820251
+201it [01:29, 2.33it/s]train loss:2.778527
+251it [01:50, 2.46it/s]train loss:2.522822
+301it [02:10, 2.56it/s]train loss:2.092895
+351it [02:30, 2.50it/s]train loss:2.028428
+401it [02:49, 2.60it/s]train loss:2.372025
+451it [03:08, 2.64it/s]train loss:1.648919
+501it [03:27, 2.72it/s]train loss:1.305234
+551it [03:45, 2.67it/s]train loss:1.681769
+601it [04:03, 2.68it/s]train loss:1.591588
+651it [04:20, 3.32it/s]train loss:1.775647
+701it [04:36, 2.85it/s]train loss:1.589397
+751it [04:52, 3.21it/s]train loss:1.510051
+801it [05:07, 3.84it/s]train loss:1.062083
+851it [05:21, 3.15it/s]train loss:1.475102
+901it [05:33, 4.18it/s]train loss:1.657275
+925it [05:36, 2.75it/s]
+['方法:随机对4例耳鸣患者的肠系疾病患病情及生活病病病病的病病病的病的病功能并与健康行对照的人进行对照患者的健康', '这些疾病是通过症状诊断的，治疗主要是对的，但的的的的的的的的的的的的的的的制很差症状的机制的机制的机制的机制的机制的机制的机制的', '必须定期筛查所有已证实具有突变的患者及其寻癌的是是是是是是是是是，是瘤瘤瘤（（瘤（（瘤（（瘤瘤（（瘤瘤（（瘤瘤（（瘤瘤（（瘤瘤（', '本文对我国高校结核病疫情现状以及高学生对结核病的认病病的病病病防治工作中的应用', '肾结石较为严重时会给患者带来说多,例如失的腰腹痛等,或者,给患者的生活来了患者的生活来了患者的生活来了患者的生活来了患者的生活来']
+BLEU:0.383827
+0it [00:00, ?it/s]15
+train loss:5.926842
+51it [00:23, 2.24it/s]train loss:1.617319
+101it [00:44, 2.27it/s]train loss:2.908852
+151it [01:06, 2.37it/s]train loss:2.510398
+201it [01:27, 2.29it/s]train loss:2.573765
+251it [01:48, 2.35it/s]train loss:1.546012
+301it [02:08, 2.45it/s]train loss:1.363271
+351it [02:28, 2.46it/s]train loss:1.228115
+401it [02:48, 2.64it/s]train loss:2.094783
+451it [03:07, 2.57it/s]train loss:1.126067
+501it [03:26, 2.59it/s]train loss:0.961082
+551it [03:44, 2.74it/s]train loss:1.570525
+601it [04:02, 2.67it/s]train loss:1.549473
+651it [04:19, 3.19it/s]train loss:1.358653
+701it [04:35, 2.80it/s]train loss:1.476333
+751it [04:51, 3.31it/s]train loss:1.527800
+801it [05:05, 3.94it/s]train loss:0.905279
+851it [05:19, 3.46it/s]train loss:1.408315
+901it [05:31, 4.24it/s]train loss:1.596183
+925it [05:34, 2.76it/s]
+['方法:随机对4例耳鸣患者的脾胃系疾病患病情及生活调查,应用', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与病毒的的的的的的的的的解很差症状的的理解很差症状的的理解很差症状的的理解很差症', '必须定期筛查所有已证实具有突变的患者及其家人，以相关的肿瘤，特病）的是是是性平滑肌瘤）的的的的的的）的的的的）的的的）的的的）的', '本文对我国高校结核病疫情现状以及高大学生对结核病的认知度和行为水病防治工的应用现状进行本述治工作中的应用现状进行本述治工作中的应', '肾结石较为严重时会给患者带来今多痛,例如容的腰腹痛等,或者日痛或者的生活也带来了年不便来了年多']
+BLEU:0.490175
+16
+1it [00:00, 2.21it/s]train loss:5.926321
+51it [00:23, 2.16it/s]train loss:1.322739
+101it [00:45, 2.28it/s]train loss:2.444280
+151it [01:07, 2.30it/s]train loss:1.318131
+201it [01:28, 2.26it/s]train loss:1.027066
+251it [01:49, 2.49it/s]train loss:2.269579
+301it [02:09, 2.48it/s]train loss:1.929846
+351it [02:29, 2.42it/s]train loss:1.091781
+401it [02:48, 2.61it/s]train loss:1.311353
+451it [03:07, 2.65it/s]train loss:1.576058
+501it [03:26, 2.64it/s]train loss:0.899283
+551it [03:44, 2.77it/s]train loss:1.952565
+601it [04:02, 2.75it/s]train loss:1.991852
+651it [04:19, 3.17it/s]train loss:1.241062
+701it [04:35, 2.97it/s]train loss:1.810770
+751it [04:51, 3.21it/s]train loss:0.995500
+801it [05:06, 3.80it/s]train loss:0.938254
+851it [05:20, 3.35it/s]train loss:1.352347
+901it [05:32, 4.34it/s]train loss:1.454877
+925it [05:35, 2.76it/s]
+['方法:随机对4例耳鸣患者的脾胃系疾病患病情况及生活进行调查,应用的病的病的病功能并与健康', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所及病的的知识相比，我们对产生极症状的机制的理解很差症状的机制的的的的制很差症', '必须定期筛查所有已证实具有突变的患者及其家人，以寻相关的肿瘤，特状肾细胞癌（h，遗传性平滑瘤，遗传性平滑瘤，遗传性平滑瘤，遗传性', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知和行为水平促进行在结核病防治工作中的应用现状进行述病防治工作中的应用现状', '肾结石较为严重时会给患者带来诸多痛,例如速的腰腹疼痛等,或者日常痛或者的生活也带来了多不便,给患者的生活也大多不便']
+BLEU:0.581704
+0it [00:00, ?it/s]17
+1it [00:00, 2.01it/s]train loss:3.269592
+51it [00:23, 2.28it/s]train loss:3.121601
+101it [00:45, 2.30it/s]train loss:1.101036
+151it [01:06, 2.37it/s]train loss:2.319664
+201it [01:28, 2.24it/s]train loss:0.927516
+251it [01:49, 2.45it/s]train loss:2.114002
+301it [02:09, 2.46it/s]train loss:1.689664
+351it [02:29, 2.53it/s]train loss:1.940174
+401it [02:49, 2.54it/s]train loss:1.241481
+451it [03:08, 2.59it/s]train loss:0.923445
+501it [03:27, 2.63it/s]train loss:0.816310
+551it [03:44, 2.83it/s]train loss:2.005227
+601it [04:02, 2.64it/s]train loss:1.324491
+651it [04:19, 3.15it/s]train loss:1.125425
+701it [04:36, 2.83it/s]train loss:1.335978
+751it [04:52, 3.23it/s]train loss:1.180665
+801it [05:06, 3.92it/s]train loss:0.892359
+851it [05:20, 3.00it/s]train loss:1.209463
+901it [05:32, 4.18it/s]train loss:1.342758
+925it [05:36, 2.75it/s]
+['方法:随机对克例耳鸣患者的脾胃系疾病患病情况及生活调查,应用脾管疾病d量表评估患者的脾功能并与健康成人进行对照患者的脾功能并与健', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所及病毒的知识相比，我们对产生极症状的的理解很差症状的的理解很差症状的机制的理', '必须定期筛查所有已证实具有突变的患者及其家人，以寻相关的肿瘤，特别是乳性平滑瘤）（h（h（h（h（h（h（h（h（h瘤，遗传性平', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知度和病防促进活动在结核病防治工', '肾结石较为严重时会给患者带来诸多痛,例如失的腰腹疼痛等,或者日常活或者的生活也带来了得便多不便,给患者的生活也带来了得便多不便,']
+BLEU:0.627376
+18
+1it [00:00, 2.00it/s]train loss:2.503050
+51it [00:23, 2.26it/s]train loss:2.662825
+101it [00:45, 2.21it/s]train loss:2.422576
+151it [01:07, 2.41it/s]train loss:2.221581
+201it [01:28, 2.21it/s]train loss:0.834295
+251it [01:49, 2.43it/s]train loss:2.095539
+301it [02:09, 2.52it/s]train loss:1.065292
+351it [02:29, 2.46it/s]train loss:0.934881
+401it [02:49, 2.55it/s]train loss:1.132501
+451it [03:08, 2.48it/s]train loss:0.827036
+501it [03:27, 2.61it/s]train loss:0.734536
+551it [03:45, 2.80it/s]train loss:1.796876
+601it [04:03, 2.74it/s]train loss:1.834332
+651it [04:21, 3.14it/s]train loss:1.058858
+701it [04:38, 2.73it/s]train loss:1.229102
+751it [04:53, 3.46it/s]train loss:1.221432
+801it [05:08, 3.96it/s]train loss:0.773259
+851it [05:22, 3.23it/s]train loss:1.180325
+901it [05:34, 4.15it/s]train loss:1.293872
+925it [05:37, 2.74it/s]
+['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习查,应用脾胃系疾病的脾胃功能并与健康成人进行对照患者的脾胃功能并与健康成人进', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的知识相比，但对产生极', '必须定期筛查所有已证实具有突变的患者及其家人，以寻目相关的肿瘤，特别是乳头（hp􀒼􀊚d，遗传性平滑，遗传性平滑，遗传性平滑，遗传性平滑', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知度和行为水平促进活动在结核病防治工作中的应用现状进行阐述病防治工作中的应', '肾结石较为严重时会给患者带来诸多痛,例如渐的腰腹疼痛等,或者日常活动中发生的的痛痛或者的生活也带来了得了得了得']
+BLEU:0.711040
+0it [00:00, ?it/s]19
+train loss:5.550304
+51it [00:23, 2.21it/s]train loss:0.976870
+101it [00:44, 2.32it/s]train loss:2.254836
+151it [01:06, 2.32it/s]train loss:0.997176
+201it [01:27, 2.26it/s]train loss:0.827951
+251it [01:48, 2.40it/s]train loss:1.925524
+301it [02:09, 2.38it/s]train loss:1.494708
+351it [02:29, 2.36it/s]train loss:0.862800
+401it [02:49, 2.65it/s]train loss:2.116175
+451it [03:08, 2.62it/s]train loss:0.830281
+501it [03:26, 2.74it/s]train loss:0.693310
+551it [03:44, 2.78it/s]train loss:1.735308
+601it [04:02, 2.71it/s]train loss:1.239159
+651it [04:19, 3.23it/s]train loss:1.498164
+701it [04:36, 2.88it/s]train loss:1.185655
+751it [04:52, 3.16it/s]train loss:0.785690
+801it [05:06, 4.03it/s]train loss:0.642768
+851it [05:20, 3.38it/s]train loss:1.123321
+901it [05:32, 4.18it/s]train loss:1.286642
+925it [05:35, 2.75it/s]
+['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习查,应用脾系疾病（患者的脾胃功能并与健康成人进行对照成人进行对照成人进行对照', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的知识相比，我们对产生极', '必定期筛查所有已有已证实具有突变的患者及其家人，以寻是乳头状肾状肾细胞癌（h，遗传性平滑瘤），遗传性平滑肌瘤），遗传性平滑瘤），', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知度和行为水平及健康病防治工作中的应用现状进行阐述病防治工作中的应用现状进', '肾结石较为严重时会给患者带来诸多痛苦,例如剧的腰腹痛等,或者日常活动中发生活也带来了诸多不便,给患者的生活也带来了诸多不便多不便']
+BLEU:0.696230
+19
+1it [00:00, 2.03it/s]train loss:2.100147
+51it [00:23, 2.14it/s]train loss:0.879064
+101it [00:45, 2.28it/s]train loss:2.188592
+151it [01:05, 2.38it/s]train loss:2.038344
+201it [01:26, 2.32it/s]train loss:1.995695
+251it [01:47, 2.34it/s]train loss:1.046737
+301it [02:07, 2.63it/s]train loss:1.603247
+351it [02:27, 2.57it/s]train loss:1.499156
+401it [02:46, 2.65it/s]train loss:2.069643
+451it [03:04, 2.74it/s]train loss:1.247883
+501it [03:24, 2.57it/s]train loss:0.601078
+551it [03:42, 2.83it/s]train loss:1.808426
+601it [03:59, 2.77it/s]train loss:1.774099
+651it [04:16, 3.13it/s]train loss:0.966390
+701it [04:32, 2.83it/s]train loss:1.159144
+751it [04:48, 3.33it/s]train loss:1.062599
+801it [05:02, 4.08it/s]train loss:0.613821
+851it [05:15, 3.32it/s]train loss:1.138808
+901it [05:27, 4.10it/s]train loss:1.152730
+925it [05:30, 2.80it/s]
+['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习进行调查,应用脾胃系量表评估患者的脾胃功能并与健康成人进行对照', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的的知识相比，我们对产生极', '必须定期筛筛查所有已证实有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚cc，遗传（he，遗传性平滑瘤），遗传性平', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知度和行为水平应促进活动在结核病防治工活动在结核病防治工活动在结核病防治工', '肾结石较为严重时会给患者带来诸多痛苦,例如剧的腰腹疼痛等,或者日常活动中发生的苦痛或者的生活也带来了诸多不便,给患者的生活也带来']
+BLEU:0.739753
+21
+1it [00:00, 2.02it/s]train loss:1.682150
+51it [00:23, 2.28it/s]train loss:2.257933
+101it [00:45, 2.25it/s]train loss:0.781941
+151it [01:06, 2.31it/s]train loss:0.865408
+201it [01:27, 2.35it/s]train loss:2.006398
+251it [01:48, 2.38it/s]train loss:0.961484
+301it [02:08, 2.58it/s]train loss:1.352008
+351it [02:28, 2.63it/s]train loss:1.588638
+401it [02:47, 2.64it/s]train loss:1.796658
+451it [03:05, 2.59it/s]train loss:0.720451
+501it [03:24, 2.59it/s]train loss:0.575103
+551it [03:42, 2.83it/s]train loss:1.661215
+601it [04:00, 2.86it/s]train loss:1.721415
+651it [04:16, 3.17it/s]train loss:0.906903
+701it [04:33, 2.91it/s]train loss:1.091114
+751it [04:48, 3.29it/s]train loss:0.704747
+801it [05:03, 4.03it/s]train loss:0.548862
+851it [05:17, 3.22it/s]train loss:1.006525
+901it [05:28, 4.18it/s]train loss:1.219498
+925it [05:32, 2.78it/s]
+0it [00:00, ?it/s]['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的知识相比，我们对产生极', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚cc，遗传性平滑，遗传性平滑，遗传性平滑瘤', '本文对我国高校结核病情现状以及高校大学生对结核病的认知、态度和行为水平影影', '肾结石较为严重时会给患者带来诸多痛苦,例如剧的腰腹疼痛等,或者日常活动']
+BLEU:0.738919
+21
+train loss:4.882117
+51it [00:22, 2.31it/s]train loss:2.349341
+101it [00:44, 2.22it/s]train loss:0.735322
+151it [01:05, 2.30it/s]train loss:0.824991
+201it [01:26, 2.40it/s]train loss:1.998978
+251it [01:46, 2.45it/s]train loss:1.750104
+301it [02:06, 2.57it/s]train loss:1.377029
+351it [02:26, 2.52it/s]train loss:1.400084
+401it [02:45, 2.57it/s]train loss:0.831351
+451it [03:04, 2.72it/s]train loss:1.146756
+501it [03:23, 2.67it/s]train loss:0.805033
+551it [03:41, 2.68it/s]train loss:0.997906
+601it [03:59, 2.84it/s]train loss:1.559128
+651it [04:15, 3.36it/s]train loss:1.432786
+701it [04:31, 2.99it/s]train loss:1.060730
+751it [04:47, 3.25it/s]train loss:0.657065
+801it [05:01, 4.16it/s]train loss:0.535544
+851it [05:15, 3.32it/s]train loss:1.122726
+901it [05:26, 4.24it/s]train loss:1.164647
+925it [05:30, 2.80it/s]
+['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病d量表评估患者的脾胃功能并与健康成人进行对照成人进', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的知识相比，但是与所涉及病毒的知识相比，我们对产生熟负症状的机制的理', '必须定定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（hd，遗传cc，遗传（hd，遗传（hd，遗', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述病防治', '肾结石总较为严重时会患者带来诸多痛苦,例如剧的腰腹疼痛等,
+或者日常活动中发生的苦痛或者隐痛或者隐痛或者的苦痛或者隐']
+BLEU:0.776258
+23
+1it [00:00, 2.21it/s]train loss:4.713909
+51it [00:22, 2.35it/s]train loss:1.862259
+101it [00:44, 2.27it/s]train loss:0.653591
+151it [01:05, 2.32it/s]train loss:0.803268
+201it [01:26, 2.34it/s]train loss:1.253407
+251it [01:47, 2.35it/s]train loss:0.834289
+301it [02:07, 2.52it/s]train loss:1.443663
+351it [02:27, 2.53it/s]train loss:1.621274
+401it [02:46, 2.67it/s]train loss:0.817436
+451it [03:05, 2.58it/s]train loss:0.597127
+501it [03:23, 2.66it/s]train loss:0.523528
+551it [03:41, 2.68it/s]train loss:0.942597
+601it [03:59, 2.85it/s]train loss:1.869967
+651it [04:16, 3.14it/s]train loss:0.803768
+701it [04:32, 3.01it/s]train loss:1.686906
+751it [04:48, 3.30it/s]train loss:1.066347
+801it [05:02, 3.97it/s]train loss:0.669956
+851it [05:16, 3.17it/s]train loss:0.951336
+901it [05:27, 4.21it/s]train loss:1.038198
+925it [05:31, 2.79it/s]
+['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病ck量表评估患者的脾胃功能并与健康成人进行对照成人进', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的的知识相比，我们对产生熟庭症状的机制的理解很差症状的机制的理解很差', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚cc，遗传性平滑肌瘤病和肾细胞癌）病和肾细', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平促进活动在结核病防治工作中的应用现状进行阐述病防治工作中', '肾结石较为严重时会给患者带来诸多痛苦,例如剧的腰腹疼痛等,
+或者日常活动中发生的苦痛或者的生活也带来了诸多不便痛,给患者的生活也带']
+BLEU:0.720345
+23
+1it [00:00, 2.26it/s]train loss:4.839638
+51it [00:22, 2.30it/s]train loss:0.657011
+101it [00:44, 2.26it/s]train loss:0.570788
+151it [01:05, 2.32it/s]train loss:0.758390
+201it [01:25, 2.26it/s]train loss:0.515487
+251it [01:46, 2.42it/s]train loss:1.458037
+301it [02:06, 2.47it/s]train loss:0.646430
+351it [02:26, 2.54it/s]train loss:1.435393
+401it [02:45, 2.67it/s]train loss:1.738791
+451it [03:03, 2.64it/s]train loss:0.566139
+501it [03:22, 2.65it/s]train loss:0.533534
+551it [03:40, 2.82it/s]train loss:1.688845
+601it [03:57, 2.79it/s]train loss:1.664917
+651it [04:14, 3.35it/s]train loss:1.393214
+701it [04:30, 2.82it/s]train loss:0.980411
+751it [04:45, 3.37it/s]train loss:1.147413
+801it [04:59, 3.92it/s]train loss:0.561172
+851it [05:12, 3.41it/s]train loss:1.089218
+901it [05:24, 4.32it/s]train loss:1.111945
+925it [05:27, 2.82it/s]
+['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病ms量表评估患者的脾功能并与健康成人进行对照成人进行', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的知识相比，但是与所涉及病毒的知识相比，我们对产生熟么症状的机制的理', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚cc，遗传性平滑，遗传性平滑，遗传性平滑，', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平促进活动在结核病防治工作中的应用现状进行阐述述述述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹疼痛等,
+或者日常活动中发生的苦痛或者隐痛或者隐痛或者的生活也带来了诸多不便,']
+BLEU:0.780479
+25
+1it [00:00, 2.23it/s]train loss:3.946472
+51it [00:22, 2.29it/s]train loss:1.994018
+101it [00:44, 2.33it/s]train loss:1.484963
+151it [01:05, 2.28it/s]train loss:0.699851
+201it [01:26, 2.37it/s]train loss:1.903083
+251it [01:47, 2.42it/s]train loss:0.704780
+301it [02:07, 2.51it/s]train loss:0.603474
+351it [02:26, 2.54it/s]train loss:1.259836
+401it [02:45, 2.66it/s]train loss:1.716283
+451it [03:04, 2.66it/s]train loss:0.533094
+501it [03:23, 2.61it/s]train loss:0.462215
+551it [03:40, 2.86it/s]train loss:1.841917
+601it [03:58, 2.84it/s]train loss:1.600061
+651it [04:15, 3.11it/s]train loss:0.726956
+701it [04:32, 2.87it/s]train loss:1.675709
+751it [04:47, 3.17it/s]train loss:0.562889
+801it [05:02, 4.06it/s]train loss:0.444320
+851it [05:16, 3.32it/s]train loss:1.111058
+901it [05:27, 4.15it/s]train loss:1.091314
+925it [05:31, 2.79it/s]
+['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病ms量表评估患者的脾胃功能并与健康成人进行对照成人进', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟迹症状的知识相比，我们对产生', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚cc，遗传，遗传性平滑肌瘤病和肾细胞癌）（', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹痛等,
+或者日常活动中发生的苦痛或者隐痛或者日常活动中发生的苦痛或者的生活也带']
+BLEU:0.828497
+26
+1it [00:00, 2.04it/s]train loss:0.997507
+51it [00:22, 2.33it/s]train loss:1.687778
+101it [00:44, 2.24it/s]train loss:0.503805
+151it [01:05, 2.40it/s]train loss:1.360419
+201it [01:26, 2.26it/s]train loss:0.523304
+251it [01:46, 2.45it/s]train loss:1.705832
+301it [02:06, 2.57it/s]train loss:1.400138
+351it [02:26, 2.50it/s]train loss:0.565638
+401it [02:45, 2.64it/s]train loss:0.670816
+451it [03:04, 2.71it/s]train loss:1.207199
+501it [03:23, 2.65it/s]train loss:0.465518
+551it [03:41, 2.78it/s]train loss:0.822704
+601it [03:58, 2.80it/s]train loss:0.848619
+651it [04:14, 3.31it/s]train loss:1.166429
+701it [04:31, 2.97it/s]train loss:1.574877
+751it [04:46, 3.28it/s]train loss:1.113231
+801it [05:01, 4.09it/s]train loss:0.460386
+851it [05:14, 3.20it/s]train loss:0.832797
+901it [05:26, 4.53it/s]train loss:1.066471
+925it [05:29, 2.81it/s]
+['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病ms量表评估患者的脾胃功能并与健康成人进行对照成人进', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟沟症状的知识相比，我们对产生', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚cc，遗传cc，遗传cc，遗传（h􀒼􀊚cc，遗传性平', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹疼痛等,
+或者日常活动中发生的苦痛或者隐痛或者隐痛或者的生活动也带来了诸多不便']
+BLEU:0.739657
+26
+1it [00:00, 2.03it/s]train loss:0.884974
+51it [00:22, 2.19it/s]train loss:0.555370
+101it [00:44, 2.31it/s]train loss:1.406086
+151it [01:05, 2.38it/s]train loss:1.667753
+201it [01:27, 2.32it/s]train loss:1.618931
+251it [01:47, 2.49it/s]train loss:1.669872
+301it [02:07, 2.52it/s]train loss:0.534896
+351it [02:27, 2.60it/s]train loss:1.417816
+401it [02:46, 2.69it/s]train loss:0.632194
+451it [03:04, 2.66it/s]train loss:0.472133
+501it [03:23, 2.73it/s]train loss:0.454951
+551it [03:41, 2.91it/s]train loss:1.612779
+601it [03:59, 2.64it/s]train loss:0.846877
+651it [04:15, 3.24it/s]train loss:0.655714
+701it [04:32, 2.89it/s]train loss:1.714616
+751it [04:47, 3.32it/s]train loss:0.509621
+801it [05:01, 3.97it/s]train loss:0.556243
+851it [05:15, 3.47it/s]train loss:0.945617
+901it [05:26, 4.40it/s]train loss:1.077939
+925it [05:30, 2.80it/s]
+['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病ms量表评估患者的脾胃功能并与健康成人进行对照', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟迹症状的知识相比，我们对产生', '必须定定筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（hd，遗传cc，遗传，遗传性平滑，遗传性平滑', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹痛等,
+或者日常活动中发生的苦痛或者隐痛或者的生活动中发生的苦痛或者的生活也带']
+BLEU:0.852338
+28
+1it [00:00, 2.24it/s]train loss:3.145005
+51it [00:22, 2.20it/s]train loss:0.506755
+101it [00:44, 2.33it/s]train loss:0.495529
+151it [01:05, 2.35it/s]train loss:0.630718
+201it [01:25, 2.37it/s]train loss:1.408280
+251it [01:46, 2.38it/s]train loss:0.606519
+301it [02:06, 2.52it/s]train loss:1.209037
+351it [02:26, 2.51it/s]train loss:1.370778
+401it [02:45, 2.62it/s]train loss:1.652276
+451it [03:04, 2.58it/s]train loss:0.444649
+501it [03:23, 2.78it/s]train loss:1.059825
+551it [03:41, 2.86it/s]train loss:1.616692
+601it [03:58, 2.84it/s]train loss:1.572934
+651it [04:14, 3.32it/s]train loss:1.189932
+701it [04:31, 3.05it/s]train loss:1.692086
+751it [04:46, 3.37it/s]train loss:0.492219
+801it [05:00, 3.95it/s]train loss:0.387874
+851it [05:14, 3.17it/s]train loss:0.784847
+901it [05:25, 4.34it/s]train loss:1.172075
+925it [05:29, 2.81it/s]
+0it [00:00, ?it/s]['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病ms量表评估患者的脾胃功能并与健康成人进行对照', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟迹症状的机制的理解很', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（hd，遗传cc，遗传cc，遗传性平滑肌瘤（hd', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹疼痛等,
+或者日常活动中发生的苦痛或者隐痛或者隐痛或者隐痛,给患者的生活也带来']
+BLEU:0.851956
+28
+1it [00:00, 2.03it/s]train loss:0.723693
+51it [00:23, 2.32it/s]train loss:1.477443
+101it [00:44, 2.32it/s]train loss:1.446139
+151it [01:05, 2.36it/s]train loss:0.587675
+201it [01:26, 2.32it/s]train loss:0.393134
+251it [01:47, 2.36it/s]train loss:0.558364
+301it [02:07, 2.63it/s]train loss:1.079612
+351it [02:27, 2.47it/s]train loss:0.453153
+401it [02:46, 2.56it/s]train loss:0.569348
+451it [03:05, 2.55it/s]train loss:0.433762
+501it [03:24, 2.70it/s]train loss:0.705211
+551it [03:42, 2.71it/s]train loss:0.729334
+601it [04:00, 2.70it/s]train loss:1.616982
+651it [04:17, 3.21it/s]train loss:1.288578
+701it [04:33, 2.78it/s]train loss:0.839066
+751it [04:49, 3.35it/s]train loss:1.134797
+801it [05:03, 3.86it/s]train loss:0.373814
+851it [05:17, 3.14it/s]train loss:0.745929
+901it [05:28, 4.18it/s]train loss:1.109466
+925it [05:32, 2.78it/s]
+['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病pro量表评估患者的脾胃功能并与健康成人进行对照成人进', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟沟症状的机制的理解很差', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚lr􀒼􀊚cc，遗传性平滑瘤，遗传性平滑肌瘤）病和', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹疼痛等,
+或者日常活动中发生的苦痛或者的生活能动中发生的苦痛或者的生活也带来了']
+BLEU:0.850549
+28
+1it [00:00, 2.25it/s]train loss:3.252069
+51it [00:22, 2.23it/s]train loss:0.442826
+101it [00:44, 2.38it/s]train loss:1.241983
+151it [01:04, 2.42it/s]train loss:1.521823
+201it [01:25, 2.46it/s]train loss:1.223447
+251it [01:45, 2.41it/s]train loss:0.526059
+301it [02:04, 2.56it/s]train loss:0.457752
+351it [02:23, 2.63it/s]train loss:0.482242
+401it [02:42, 2.84it/s]train loss:1.493998
+451it [03:00, 2.84it/s]train loss:1.260570
+501it [03:18, 2.72it/s]train loss:0.411749
+551it [03:35, 2.90it/s]train loss:1.699991
+601it [03:52, 2.91it/s]train loss:1.660547
+651it [04:08, 3.45it/s]train loss:1.227196
+701it [04:24, 3.10it/s]train loss:1.696454
+751it [04:39, 3.51it/s]train loss:1.099106
+801it [04:52, 4.29it/s]train loss:0.374024
+851it [05:05, 3.33it/s]train loss:0.707972
+901it [05:16, 4.55it/s]train loss:0.810327
+925it [05:19, 2.89it/s]
+['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病pro量表评估患者的脾胃功能并与健康成人进行对照', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟迹症状的机制的理解很', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚lr􀒼􀊚cc，遗传性平滑，遗传性平滑，遗传性平滑', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹痛等,
+或者日常活动中发生的苦痛或者隐痛或者的生活动也带来了诸多不便,给患者的']
+BLEU:0.869471
+31
+1it [00:00, 2.07it/s]train loss:0.622338
+51it [00:21, 2.35it/s]train loss:0.404765
+101it [00:42, 2.50it/s]train loss:1.665397
+151it [01:02, 2.61it/s]train loss:1.308425
+201it [01:22, 2.39it/s]train loss:0.394817
+251it [01:41, 2.59it/s]train loss:1.327822
+301it [02:00, 2.69it/s]train loss:1.045298
+351it [02:19, 2.65it/s]train loss:0.496930
+401it [02:37, 2.80it/s]train loss:1.536951
+451it [02:55, 2.72it/s]train loss:0.369580
+501it [03:12, 2.91it/s]train loss:0.868705
+551it [03:30, 2.99it/s]train loss:1.678415
+601it [03:46, 2.95it/s]train loss:1.547513
+651it [04:02, 3.53it/s]train loss:1.285460
+701it [04:17, 3.13it/s]train loss:1.534429
+751it [04:32, 3.52it/s]train loss:1.033035
+801it [04:45, 4.27it/s]train loss:0.356483
+851it [04:58, 3.53it/s]train loss:0.963615
+901it [05:09, 4.54it/s]train loss:1.031183
+925it [05:12, 2.96it/s]
+['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病pro量表评估患者的脾胃功能并与健康成人进行对照行对照', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟迹症状的机制的理解很差症状的', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（hd􀒼􀊚cc，遗传性平滑肌瘤）', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹疼痛等,或者日常活动中发生的苦痛或者隐痛或者的生活也带来了诸多不便
+,给患者的']
+BLEU:0.872462
+32
+1it [00:00, 2.05it/s]train loss:0.599630
+51it [00:21, 2.36it/s]train loss:2.237868
+101it [00:42, 2.31it/s]train loss:0.371828
+151it [01:02, 2.37it/s]train loss:0.504385
+201it [01:22, 2.39it/s]train loss:0.356578
+251it [01:42, 2.46it/s]train loss:0.520581
+301it [02:01, 2.66it/s]train loss:0.481225
+351it [02:20, 2.71it/s]train loss:1.257510
+401it [02:38, 2.82it/s]train loss:1.593519
+451it [02:56, 2.69it/s]train loss:0.391321
+501it [03:14, 2.81it/s]train loss:0.380191
+551it [03:31, 2.81it/s]train loss:0.662221
+601it [03:48, 2.86it/s]train loss:1.425132
+651it [04:04, 3.40it/s]train loss:1.265895
+701it [04:20, 3.05it/s]train loss:1.499275
+751it [04:34, 3.49it/s]train loss:0.999658
+801it [04:48, 4.25it/s]train loss:0.335284
+851it [05:01, 3.33it/s]train loss:0.679220
+901it [05:12, 4.62it/s]train loss:0.795888
+925it [05:15, 2.93it/s]
+['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病pro量表评估患者的脾胃功能并与健康成人进行对照行对照', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟悉症状的机制的理解很差症状的', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚lr􀒼􀊚cc，遗传性', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹疼痛等,或者日常活动中发生的苦痛或者隐痛,给患者的生活也带来了诸多不便
+,给患']
+BLEU:0.880766
+33
+1it [00:00, 2.16it/s]train loss:1.961683
+51it [00:22, 2.38it/s]train loss:1.623773
+101it [00:43, 2.39it/s]train loss:1.732471
+151it [01:03, 2.48it/s]train loss:0.499622
+201it [01:23, 2.51it/s]train loss:1.467867
+251it [01:43, 2.51it/s]train loss:1.284702
+301it [02:02, 2.71it/s]train loss:1.002123
+351it [02:20, 2.65it/s]train loss:1.138450
+401it [02:39, 2.77it/s]train loss:1.443094
+451it [02:57, 2.77it/s]train loss:0.409828
+501it [03:14, 2.76it/s]train loss:0.348127
+551it [03:31, 2.88it/s]train loss:0.669197
+601it [03:48, 2.73it/s]train loss:0.697997
+651it [04:04, 3.52it/s]train loss:1.166505
+701it [04:20, 3.02it/s]train loss:1.513710
+751it [04:34, 3.52it/s]train loss:0.896161
+801it [04:48, 4.34it/s]train loss:0.344784
+851it [05:01, 3.30it/s]train loss:0.685466
+901it [05:12, 4.37it/s]train loss:0.988628
+925it [05:16, 2.93it/s]
+0it [00:00, ?it/s]['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病pro量表评估患者的脾胃功能并与健康成人进行对照行对照', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟悉症状的机制的理解很差症状的', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚lr􀒼􀊚cc，遗传性平滑，遗传性平滑，遗传性平滑', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹疼痛等
+,或者日常活动中发生的苦痛或者隐痛,给患者的生活也带来了诸多不便,给患']
+BLEU:0.861913
+33
+1it [00:00, 2.06it/s]train loss:0.536006
+51it [00:21, 2.35it/s]train loss:0.387652
+101it [00:42, 2.44it/s]train loss:1.364913
+151it [01:03, 2.41it/s]train loss:1.462879
+201it [01:22, 2.40it/s]train loss:0.382365
+251it [01:42, 2.48it/s]train loss:0.530118
+301it [02:01, 2.72it/s]train loss:1.069675
+351it [02:20, 2.53it/s]train loss:0.418689
+401it [02:38, 2.88it/s]train loss:1.318022
+451it [02:56, 2.80it/s]train loss:1.066631
+501it [03:14, 2.72it/s]train loss:0.321509
+551it [03:31, 2.92it/s]train loss:1.607169
+601it [03:48, 2.90it/s]train loss:1.455740
+651it [04:04, 3.28it/s]train loss:0.534129
+701it [04:19, 3.12it/s]train loss:1.531241
+751it [04:34, 3.47it/s]train loss:0.883086
+801it [04:48, 4.09it/s]train loss:0.456399
+851it [05:01, 3.29it/s]train loss:0.638199
+901it [05:12, 4.36it/s]train loss:0.757108
+925it [05:15, 2.93it/s]
+0it [00:00, ?it/s]['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病pro量表评估患者的脾胃功能并与健康成人进行对', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟悉症状的机制的理解很', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚lr􀒼􀊚cc，遗传性平滑肌瘤）', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹疼痛等,或者日常活动中发生的苦痛或者隐痛
+,给患者的生活也带来了诸多不便']
+BLEU:0.874638
+33
+train loss:1.730391
+51it [00:22, 2.29it/s]train loss:0.320888
+101it [00:43, 2.44it/s]train loss:1.139784
+151it [01:02, 2.39it/s]train loss:0.463955
+201it [01:23, 2.48it/s]train loss:1.117406
+251it [01:42, 2.52it/s]train loss:0.480490
+301it [02:01, 2.63it/s]train loss:1.087605
+351it [02:20, 2.56it/s]train loss:0.405334
+401it [02:38, 2.77it/s]train loss:1.434050
+451it [02:56, 2.82it/s]train loss:0.881977
+501it [03:14, 2.80it/s]train loss:0.330850
+551it [03:31, 2.90it/s]train loss:1.431862
+601it [03:48, 2.80it/s]train loss:0.632699
+651it [04:04, 3.36it/s]train loss:0.531090
+701it [04:19, 3.02it/s]train loss:0.766071
+751it [04:34, 3.45it/s]train loss:0.799254
+801it [04:48, 4.14it/s]train loss:0.408696
+851it [05:01, 3.31it/s]train loss:0.622178
+901it [05:12, 4.56it/s]train loss:0.981221
+925it [05:15, 2.93it/s]
+['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病pro量表评估患者的脾胃功能并与健康成人进行对照', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟悉症状的机制的理解很差', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚lr􀒼􀊚cc，遗传性平滑肌瘤）', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹疼痛等,或者日常活动中发生的疲痛或者隐痛,
+给患者的生活也带来了诸多不便多不便']
+BLEU:0.883733
+0it [00:00, ?it/s]36
+1it [00:00, 2.29it/s]train loss:1.872188
+51it [00:22, 2.38it/s]train loss:0.359906
+101it [00:42, 2.40it/s]train loss:0.328398
+151it [01:03, 2.50it/s]train loss:1.208923
+201it [01:22, 2.40it/s]train loss:0.309869
+251it [01:42, 2.53it/s]train loss:1.281808
+301it [02:01, 2.64it/s]train loss:0.946922
+351it [02:20, 2.61it/s]train loss:0.397426
+401it [02:38, 2.80it/s]train loss:1.466346
+451it [02:56, 2.84it/s]train loss:0.371330
+501it [03:14, 2.77it/s]train loss:0.527027
+551it [03:31, 2.79it/s]train loss:0.608852
+601it [03:48, 2.90it/s]train loss:1.520470
+651it [04:04, 3.35it/s]train loss:0.545066
+701it [04:20, 3.09it/s]train loss:1.337032
+751it [04:35, 3.46it/s]train loss:0.843716
+801it [04:49, 4.13it/s]train loss:0.400647
+851it [05:02, 3.54it/s]train loss:0.901967
+901it [05:12, 4.53it/s]train loss:0.933656
+925it [05:16, 2.92it/s]
+['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病pro量表评估患者的脾胃功能并与健康成人进行对照', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟悉症状的知识相比，我们对产生', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚lr􀒼􀊚cc，遗传性平滑肌瘤病和肾细胞癌）', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹疼痛等,或者日常活动中发生的疲痛或者隐痛,
+给患者的生活也带来了诸多不便便,给']
+BLEU:0.890351
+37
+1it [00:00, 2.07it/s]train loss:0.442064
+51it [00:22, 2.38it/s]train loss:1.137988
+101it [00:43, 2.34it/s]train loss:0.330634
+151it [01:03, 2.54it/s]train loss:1.164773
+201it [01:23, 2.40it/s]train loss:0.283748
+251it [01:42, 2.56it/s]train loss:1.198081
+301it [02:02, 2.58it/s]train loss:0.383951
+351it [02:21, 2.59it/s]train loss:0.393603
+401it [02:39, 2.72it/s]train loss:1.401928
+451it [02:57, 2.71it/s]train loss:0.367275
+501it [03:15, 2.80it/s]train loss:0.567356
+551it [03:32, 2.81it/s]train loss:0.583756
+601it [03:49, 2.92it/s]train loss:1.385421
+651it [04:05, 3.44it/s]train loss:1.133336
+701it [04:21, 2.92it/s]train loss:0.734862
+751it [04:36, 3.48it/s]train loss:0.795674
+801it [04:50, 4.02it/s]train loss:0.416565
+851it [05:03, 3.35it/s]train loss:0.588047
+901it [05:14, 4.68it/s]train loss:1.026112
+925it [05:18, 2.91it/s]
+0it [00:00, ?it/s]['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病pro量表评估患者的脾胃功能并与健康成人进行对照照', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟悉症状的机制的理解很差差症状', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚lr􀒼􀊚cc，遗传性平滑肌瘤）', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹疼痛等,
+或者日常活动中发生的疲痛或者隐痛,给患者的生活也带来了诸多不便便,给']
+BLEU:0.887077
+37
+1it [00:00, 2.06it/s]train loss:0.420971
+51it [00:21, 2.38it/s]train loss:1.288510
+101it [00:42, 2.43it/s]train loss:0.319516
+151it [01:02, 2.39it/s]train loss:0.422560
+201it [01:22, 2.44it/s]train loss:0.265899
+251it [01:41, 2.60it/s]train loss:1.382719
+301it [02:00, 2.71it/s]train loss:0.371633
+351it [02:19, 2.68it/s]train loss:1.006823
+401it [02:37, 2.88it/s]train loss:1.492298
+451it [02:55, 2.86it/s]train loss:0.734415
+501it [03:12, 2.94it/s]train loss:0.526769
+551it [03:29, 3.09it/s]train loss:1.372608
+601it [03:46, 2.81it/s]train loss:0.621412
+651it [04:02, 3.50it/s]train loss:1.103420
+701it [04:17, 3.10it/s]train loss:1.357384
+751it [04:32, 3.51it/s]train loss:0.399087
+801it [04:46, 4.27it/s]train loss:0.277237
+851it [04:58, 3.60it/s]train loss:0.775945
+901it [05:09, 4.78it/s]train loss:0.919416
+925it [05:12, 2.96it/s]
+['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病pro量表评估患者的脾胃功能并与健康成人进行对照', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟悉症状的机制的理解很差差', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚lr􀒼􀊚cc，遗传性平滑肌瘤）', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹疼痛等,
+或者日常活动中发生的苦痛或者生活也带来了诸多不便便便便便便便便便便便']
+BLEU:0.890400
+0it [00:00, ?it/s]39
+train loss:1.744941
+51it [00:22, 2.33it/s]train loss:0.294902
+101it [00:42, 2.42it/s]train loss:0.357000
+151it [01:02, 2.60it/s]train loss:1.059824
+201it [01:22, 2.33it/s]train loss:0.237025
+251it [01:42, 2.61it/s]train loss:1.201818
+301it [02:01, 2.57it/s]train loss:0.348298
+351it [02:19, 2.59it/s]train loss:0.380028
+401it [02:38, 2.84it/s]train loss:1.419000
+451it [02:56, 2.77it/s]train loss:0.288955
+501it [03:14, 2.84it/s]train loss:0.273360
+551it [03:31, 2.82it/s]train loss:0.601164
+601it [03:48, 2.87it/s]train loss:1.269720
+651it [04:03, 3.37it/s]train loss:0.487740
+701it [04:19, 3.08it/s]train loss:0.694763
+751it [04:34, 3.47it/s]train loss:0.732032
+801it [04:47, 4.15it/s]train loss:0.412249
+851it [05:00, 3.57it/s]train loss:0.916431
+901it [05:11, 4.72it/s]train loss:0.884062
+925it [05:14, 2.94it/s]
+0it [00:00, ?it/s]['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病pro量表评估患者的脾胃功能并与健康成人进行对照', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟悉症状的机制的理解很差差症状', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚lr􀒼􀊚cc，遗传性平滑肌瘤）', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹疼痛等,
+或者日常活动中发生的疲痛或者隐痛']
+BLEU:0.887739
+39
+train loss:1.814734
+51it [00:22, 2.30it/s]train loss:0.290160
+101it [00:42, 2.52it/s]train loss:1.284424
+151it [01:02, 2.39it/s]train loss:0.407843
+201it [01:22, 2.37it/s]train loss:0.232887
+251it [01:42, 2.50it/s]train loss:0.387596
+301it [02:01, 2.61it/s]train loss:1.058929
+351it [02:20, 2.61it/s]train loss:0.317238
+401it [02:38, 2.75it/s]train loss:0.394026
+451it [02:56, 2.80it/s]train loss:0.322247
+501it [03:14, 2.81it/s]train loss:0.267353
+551it [03:31, 2.95it/s]train loss:1.373200
+601it [03:48, 2.91it/s]train loss:1.354595
+651it [04:04, 3.31it/s]train loss:0.470566
+701it [04:20, 3.17it/s]train loss:1.460989
+751it [04:34, 3.49it/s]train loss:0.691430
+801it [04:48, 4.08it/s]train loss:0.380042
+851it [05:01, 3.47it/s]train loss:0.881850
+901it [05:12, 4.44it/s]train loss:0.921723
+925it [05:16, 2.93it/s]
+['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病pro量表评估患者的脾胃功能并与健康成人进行对照', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟悉症状的机制的理解很差', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚lr􀒼􀊚cc，遗传性平滑肌瘤）', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹疼痛等,或者日常活动中发生的疲痛或者隐痛,给患者的生活也带来了诸多不便便
+']
+BLEU:0.895363
+0it [00:00, ?it/s]41
+train loss:0.367047
+51it [00:22, 2.30it/s]train loss:0.274071
+101it [00:42, 2.43it/s]train loss:1.144913
+151it [01:02, 2.57it/s]train loss:1.090211
+201it [01:22, 2.61it/s]train loss:1.146724
+251it [01:42, 2.43it/s]train loss:0.410347
+301it [02:01, 2.71it/s]train loss:0.940079
+351it [02:19, 2.71it/s]train loss:1.062021
+401it [02:38, 2.65it/s]train loss:0.388029
+451it [02:56, 2.87it/s]train loss:0.846919
+501it [03:14, 2.78it/s]train loss:0.259957
+551it [03:31, 2.99it/s]train loss:1.473334
+601it [03:48, 2.91it/s]train loss:1.311124
+651it [04:04, 3.36it/s]train loss:0.524003
+701it [04:19, 3.06it/s]train loss:0.695084
+751it [04:34, 3.38it/s]train loss:0.373968
+801it [04:48, 4.13it/s]train loss:0.334648
+851it [05:01, 3.64it/s]train loss:0.841324
+901it [05:11, 4.46it/s]train loss:0.879912
+925it [05:15, 2.93it/s]
+['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病pro量表评估患者的脾胃功能并与健康成人进行对照', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟悉症状的机制的理解很差差', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚lr􀒼􀊚cc，遗传性平滑肌瘤）', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹疼痛等,
+或者日常活动中发生的苦痛或者的生活也带来了诸多不便便便便便便便便便便']
+BLEU:0.886757
+41
+1it [00:00, 2.03it/s]train loss:0.383557
+51it [00:21, 2.45it/s]train loss:0.924206
+101it [00:42, 2.39it/s]train loss:0.299082
+151it [01:02, 2.49it/s]train loss:1.150137
+201it [01:22, 2.37it/s]train loss:0.252017
+251it [01:41, 2.49it/s]train loss:0.422956
+301it [02:01, 2.58it/s]train loss:0.302977
+351it [02:19, 2.54it/s]train loss:0.326163
+401it [02:38, 2.82it/s]train loss:0.393675
+451it [02:55, 2.83it/s]train loss:0.283773
+501it [03:13, 2.97it/s]train loss:0.598832
+551it [03:30, 2.99it/s]train loss:1.257662
+601it [03:47, 2.80it/s]train loss:0.582186
+651it [04:03, 3.45it/s]train loss:1.232160
+701it [04:18, 3.00it/s]train loss:0.697050
+751it [04:33, 3.43it/s]train loss:0.346778
+801it [04:47, 4.26it/s]train loss:0.256357
+851it [05:00, 3.34it/s]train loss:0.563890
+901it [05:11, 4.52it/s]train loss:0.868026
+925it [05:14, 2.94it/s]
+['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病pro量表评估患者的脾胃功能并与健康成人进行对', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟悉症状的机制的理解很差', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚lr􀒼􀊚cc，遗传性平滑肌瘤）', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹疼痛等,或者日常活动中发生的疲痛或者隐痛,给患者的生活也带来了诸多不便']
+BLEU:0.901577
+0it [00:00, ?it/s]43
+1it [00:00, 2.06it/s]train loss:0.338850
+51it [00:22, 2.32it/s]train loss:0.273877
+101it [00:43, 2.42it/s]train loss:0.258468
+151it [01:02, 2.50it/s]train loss:0.390307
+201it [01:22, 2.44it/s]train loss:1.120952
+251it [01:42, 2.55it/s]train loss:0.376376
+301it [02:01, 2.55it/s]train loss:0.324072
+351it [02:20, 2.72it/s]train loss:0.956174
+401it [02:38, 2.87it/s]train loss:1.320766
+451it [02:56, 2.79it/s]train loss:0.337218
+501it [03:14, 2.83it/s]train loss:0.248759
+551it [03:31, 3.03it/s]train loss:1.337675
+601it [03:48, 2.86it/s]train loss:0.563222
+651it [04:04, 3.43it/s]train loss:0.852608
+701it [04:20, 3.04it/s]train loss:0.672664
+751it [04:35, 3.44it/s]train loss:0.762007
+801it [04:48, 4.13it/s]train loss:0.359014
+851it [05:01, 3.51it/s]train loss:0.832957
+901it [05:12, 4.46it/s]train loss:0.911731
+925it [05:16, 2.93it/s]
+0it [00:00, ?it/s]['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病pro量表评估患者的脾胃功能并与健康成人进行对照', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟悉症状的机制的理解很差差症状', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚lr􀒼􀊚cc，遗传性平滑肌瘤病和肾细胞癌）', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹疼痛等,
+或者日常活动中发生的疲痛或者隐痛']
+BLEU:0.890153
+43
+1it [00:00, 2.06it/s]train loss:0.312735
+51it [00:22, 2.37it/s]train loss:1.299163
+101it [00:42, 2.42it/s]train loss:0.290705
+151it [01:03, 2.45it/s]train loss:0.866064
+201it [01:22, 2.35it/s]train loss:0.255201
+251it [01:42, 2.49it/s]train loss:0.370921
+301it [02:01, 2.59it/s]train loss:0.311921
+351it [02:20, 2.60it/s]train loss:0.344307
+401it [02:38, 2.74it/s]train loss:0.373632
+451it [02:56, 2.92it/s]train loss:0.758234
+501it [03:14, 2.76it/s]train loss:0.575994
+551it [03:31, 2.96it/s]train loss:1.243045
+601it [03:48, 3.00it/s]train loss:1.412232
+651it [04:04, 3.26it/s]train loss:0.470215
+701it [04:19, 3.16it/s]train loss:1.286247
+751it [04:34, 3.52it/s]train loss:0.351592
+801it [04:48, 4.08it/s]train loss:0.343382
+851it [05:01, 3.49it/s]train loss:0.810778
+901it [05:12, 4.17it/s]train loss:0.646958
+925it [05:15, 2.93it/s]
+['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病pro量表评估患者的脾胃功能并与健康成人进行对照', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟悉症状的机制的理解很差差症状', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚lr􀒼􀊚cc，遗传性平滑肌瘤病和肾细胞癌）', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹疼痛等,或者日常活动中发生的苦痛或者隐痛,
+给患者的生活也带来了诸多不便便便便']
+BLEU:0.876372
+43
+1it [00:00, 2.06it/s]train loss:0.345151
+51it [00:21, 2.43it/s]train loss:0.636889
+101it [00:42, 2.33it/s]train loss:0.272420
+151it [01:02, 2.51it/s]train loss:0.381576
+201it [01:21, 2.40it/s]train loss:0.273051
+251it [01:41, 2.49it/s]train loss:0.406351
+301it [02:00, 2.52it/s]train loss:0.281939
+351it [02:19, 2.67it/s]train loss:0.813249
+401it [02:37, 2.68it/s]train loss:0.358550
+451it [02:55, 2.91it/s]train loss:0.717399
+501it [03:13, 2.88it/s]train loss:0.534902
+551it [03:29, 2.92it/s]train loss:1.304651
+601it [03:46, 2.91it/s]train loss:1.216672
+651it [04:02, 3.30it/s]train loss:0.452463
+701it [04:18, 3.04it/s]train loss:1.451990
+751it [04:32, 3.35it/s]train loss:0.318458
+801it [04:46, 4.21it/s]train loss:0.344739
+851it [04:59, 3.34it/s]train loss:0.527662
+901it [05:09, 4.55it/s]train loss:0.637820
+925it [05:13, 2.95it/s]
+['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病pro量表评估患者的脾胃功能并与健康成人进行对', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟悉症状的机制的理解很差', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚lr􀒼􀊚cc，遗传性平滑肌瘤病和肾细胞癌）', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹疼痛等,或者日常活动中发生的疲痛或者隐痛,
+给患者的生活也带来了诸多不便']
+BLEU:0.902230
+46
+1it [00:00, 2.06it/s]train loss:0.323223
+51it [00:22, 2.28it/s]train loss:0.249474
+101it [00:43, 2.39it/s]train loss:0.239632
+151it [01:03, 2.42it/s]train loss:0.363649
+201it [01:22, 2.41it/s]train loss:0.259909
+251it [01:42, 2.52it/s]train loss:0.447157
+301it [02:01, 2.74it/s]train loss:0.919888
+351it [02:20, 2.61it/s]train loss:0.302416
+401it [02:38, 2.73it/s]train loss:0.360014
+451it [02:56, 2.77it/s]train loss:0.268762
+501it [03:14, 2.82it/s]train loss:0.505742
+551it [03:31, 3.00it/s]train loss:1.169806
+601it [03:48, 2.75it/s]train loss:0.533561
+651it [04:04, 3.33it/s]train loss:0.454358
+701it [04:20, 3.18it/s]train loss:1.286500
+751it [04:34, 3.46it/s]train loss:0.674422
+801it [04:48, 4.11it/s]train loss:0.352649
+851it [05:01, 3.33it/s]train loss:0.515753
+901it [05:12, 4.42it/s]train loss:0.642348
+925it [05:16, 2.93it/s]
+0it [00:00, ?it/s]['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病pro量表评估患者的脾胃功能并与健康成人进行对照照', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟悉症状的机制的理解很差差症状', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚lr􀒼􀊚cc，遗传性平滑肌瘤）', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹疼痛等,
+或者日常活动中发生的疲痛或者隐痛,给患者的生活也带来了诸多不便便便便']
+BLEU:0.882017
+46
+1it [00:00, 2.06it/s]train loss:0.303304
+51it [00:21, 2.38it/s]train loss:1.185101
+101it [00:42, 2.46it/s]train loss:1.109184
+151it [01:02, 2.51it/s]train loss:1.206861
+201it [01:22, 2.47it/s]train loss:0.818089
+251it [01:41, 2.47it/s]train loss:0.366307
+301it [02:01, 2.53it/s]train loss:0.310161
+351it [02:19, 2.70it/s]train loss:1.063411
+401it [02:38, 2.80it/s]train loss:1.325318
+451it [02:56, 2.92it/s]train loss:0.723031
+501it [03:13, 2.77it/s]train loss:0.221212
+551it [03:30, 2.84it/s]train loss:0.530726
+601it [03:47, 2.97it/s]train loss:1.299447
+651it [04:03, 3.42it/s]train loss:1.165040
+701it [04:19, 3.06it/s]train loss:0.620313
+751it [04:33, 3.47it/s]train loss:0.588216
+801it [04:47, 4.16it/s]train loss:0.317363
+851it [05:00, 3.52it/s]train loss:0.754315
+901it [05:11, 4.35it/s]train loss:0.627649
+925it [05:14, 2.94it/s]
+['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病pro量表评估患者的脾胃功能并与健康成人进行对照', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟悉症状的机制的理解很差差症状', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚lr􀒼􀊚cc，遗传性平滑肌瘤）', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹疼痛等,或者日常活动中发生的钝痛或者隐痛']
+BLEU:0.902626
+48
+1it [00:00, 2.06it/s]train loss:0.293826
+51it [00:22, 2.36it/s]train loss:0.245409
+101it [00:42, 2.36it/s]train loss:0.254664
+151it [01:02, 2.50it/s]train loss:1.101784
+201it [01:22, 2.50it/s]train loss:0.932890
+251it [01:42, 2.44it/s]train loss:0.360818
+301it [02:01, 2.70it/s]train loss:0.743560
+351it [02:20, 2.69it/s]train loss:1.086085
+401it [02:38, 2.72it/s]train loss:0.373960
+451it [02:56, 2.83it/s]train loss:0.273459
+501it [03:13, 2.85it/s]train loss:0.221224
+551it [03:30, 2.99it/s]train loss:1.132985
+601it [03:47, 2.95it/s]train loss:1.510973
+651it [04:03, 3.47it/s]train loss:1.016732
+701it [04:18, 3.03it/s]train loss:0.619673
+751it [04:33, 3.44it/s]train loss:0.330038
+801it [04:47, 4.17it/s]train loss:0.234260
+851it [05:00, 3.50it/s]train loss:0.855771
+901it [05:11, 4.48it/s]train loss:0.810490
+925it [05:14, 2.94it/s]
+['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病pro量表评估患者的脾胃功能并与健康成人进行对照', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟悉症状的机制的理解很差', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚lr􀒼􀊚cc，遗传性平滑肌瘤病和肾细胞癌）', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹疼痛等,或者日常活动中发生的钝痛或者隐痛,
+给患者的生活也带来了诸多不便']
+BLEU:0.906622
+0it [00:00, ?it/s]49
+1it [00:00, 2.29it/s]train loss:1.091292
+51it [00:22, 2.35it/s]train loss:0.230443
+101it [00:42, 2.51it/s]train loss:0.974395
+151it [01:02, 2.47it/s]train loss:0.857341
+201it [01:21, 2.52it/s]train loss:0.878141
+251it [01:41, 2.59it/s]train loss:1.170321
+301it [02:00, 2.70it/s]train loss:0.660762
+351it [02:18, 2.59it/s]train loss:0.275600
+401it [02:36, 2.72it/s]train loss:0.348401
+451it [02:54, 2.80it/s]train loss:0.262151
+501it [03:12, 2.84it/s]train loss:0.235655
+551it [03:29, 2.78it/s]train loss:0.504197
+601it [03:46, 2.96it/s]train loss:1.420388
+651it [04:01, 3.35it/s]train loss:0.435255
+701it [04:17, 2.96it/s]train loss:0.601036
+751it [04:31, 3.43it/s]train loss:0.304891
+801it [04:45, 4.13it/s]train loss:0.303267
+851it [04:58, 3.55it/s]train loss:0.823476
+901it [05:09, 4.54it/s]train loss:0.822609
+925it [05:12, 2.96it/s]
+['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病pro量表评估患者的脾胃功能并与健康成人进行对照照', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟悉症状的机制的理解很差差症状', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚lr􀒼􀊚cc，遗传性平滑肌瘤病和肾细胞癌）', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹疼痛等,或者日常活动中发生的钝痛或者隐痛,
+给患者的生活也带来了诸多不便便便便']
+BLEU:0.890080
+49
+1it [00:00, 2.06it/s]train loss:0.274619
+51it [00:21, 2.44it/s]train loss:0.609961
+101it [00:42, 2.44it/s]train loss:1.307488
+151it [01:02, 2.51it/s]train loss:0.870117
+201it [01:21, 2.56it/s]train loss:0.791717
+251it [01:41, 2.49it/s]train loss:0.352578
+301it [02:00, 2.61it/s]train loss:0.281222
+351it [02:19, 2.56it/s]train loss:0.278232
+401it [02:37, 2.72it/s]train loss:0.314810
+451it [02:55, 2.91it/s]train loss:0.853637
+501it [03:13, 2.71it/s]train loss:0.223471
+551it [03:30, 2.99it/s]train loss:1.291039
+601it [03:46, 2.87it/s]train loss:0.545281
+651it [04:02, 3.39it/s]train loss:0.439532
+701it [04:18, 3.11it/s]train loss:1.204581
+751it [04:33, 3.48it/s]train loss:0.292661
+801it [04:46, 4.20it/s]train loss:0.385570
+851it [04:59, 3.45it/s]train loss:0.714353
+901it [05:10, 4.42it/s]train loss:0.806176
+925it [05:13, 2.95it/s]
+['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病pro量表评估患者的脾胃功能并与健康成人进行对照', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟悉症状的机制的理解很差差', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚lr􀒼􀊚cc，遗传性平滑肌瘤病和肾细胞癌）', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹疼痛等,或者日常活动中发生的钝痛或者隐痛']
+BLEU:0.887395
+49
+1it [00:00, 2.28it/s]train loss:1.171195
+51it [00:22, 2.39it/s]train loss:0.734162
+101it [00:42, 2.53it/s]train loss:1.077904
+151it [01:02, 2.50it/s]train loss:1.043810
+201it [01:22, 2.39it/s]train loss:0.235294
+251it [01:42, 2.60it/s]train loss:0.942279
+301it [02:01, 2.63it/s]train loss:0.848881
+351it [02:20, 2.66it/s]train loss:0.290451
+401it [02:38, 2.81it/s]train loss:1.391462
+451it [02:56, 2.71it/s]train loss:0.262374
+501it [03:14, 2.82it/s]train loss:0.216709
+551it [03:31, 2.85it/s]train loss:0.512668
+601it [03:48, 2.85it/s]train loss:1.242750
+651it [04:04, 3.51it/s]train loss:1.111071
+701it [04:19, 2.90it/s]train loss:0.584904
+751it [04:34, 3.49it/s]train loss:0.638107
+801it [04:48, 4.25it/s]train loss:0.196737
+851it [05:01, 3.33it/s]train loss:0.505661
+901it [05:12, 4.28it/s]train loss:0.596374
+925it [05:15, 2.93it/s]
+['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病pro量表评估患者的脾胃功能并与健康成人进行对照', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟悉症状的机制的理解很差', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚lr􀒼􀊚cc，遗传性平滑肌瘤）', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹疼痛等,或者日常活动中发生的钝痛或者隐痛']
+BLEU:0.903675
+49
+1it [00:00, 2.06it/s]train loss:0.262297
+51it [00:21, 2.43it/s]train loss:0.928643
+101it [00:42, 2.41it/s]train loss:0.304681
+151it [01:01, 2.48it/s]train loss:0.328536
+201it [01:21, 2.36it/s]train loss:0.224851
+251it [01:41, 2.55it/s]train loss:0.350441
+301it [02:00, 2.76it/s]train loss:0.829652
+351it [02:18, 2.73it/s]train loss:0.885410
+401it [02:36, 2.89it/s]train loss:1.245003
+451it [02:54, 2.82it/s]train loss:0.690678
+501it [03:11, 2.88it/s]train loss:0.554393
+551it [03:28, 3.09it/s]train loss:1.034689
+601it [03:45, 2.74it/s]train loss:0.535011
+651it [04:00, 3.36it/s]train loss:0.418743
+701it [04:16, 3.12it/s]train loss:1.182132
+751it [04:31, 3.56it/s]train loss:0.321665
+801it [04:44, 4.27it/s]train loss:0.203747
+851it [04:57, 3.62it/s]train loss:0.743723
+901it [05:08, 4.53it/s]train loss:0.775683
+925it [05:11, 2.97it/s]
+['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病pro量表评估患者的脾胃功能并与健康成人进行对照', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟悉症状的机制的理解很差', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚lr􀒼􀊚cc，遗传性平滑肌瘤病和肾细胞癌）', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹疼痛等,或者日常活动中发生的钝痛或者隐痛']
+BLEU:0.903244
+49
+1it [00:00, 2.26it/s]train loss:1.133673
+51it [00:22, 2.36it/s]train loss:0.213263
+101it [00:42, 2.32it/s]train loss:0.215936
+151it [01:02, 2.54it/s]train loss:0.790469
+201it [01:21, 2.61it/s]train loss:0.860045
+251it [01:41, 2.56it/s]train loss:1.200512
+301it [02:00, 2.59it/s]train loss:0.287037
+351it [02:18, 2.67it/s]train loss:0.842346
+401it [02:37, 2.83it/s]train loss:0.329343
+451it [02:54, 2.87it/s]train loss:0.246368
+501it [03:12, 2.87it/s]train loss:0.201667
+551it [03:29, 2.80it/s]train loss:0.473884
+601it [03:46, 2.96it/s]train loss:1.311747
+651it [04:01, 3.34it/s]train loss:0.416985
+701it [04:17, 2.99it/s]train loss:0.579447
+751it [04:31, 3.44it/s]train loss:0.314251
+801it [04:45, 4.11it/s]train loss:0.276497
+851it [04:58, 3.30it/s]train loss:0.503467
+901it [05:09, 4.47it/s]train loss:0.599686
+925it [05:12, 2.96it/s]
+['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病pro量表评估患者的脾胃功能并与健康成人进行对照', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟悉症状的机制的理解很差差', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚lr􀒼􀊚cc，遗传性平滑肌瘤病和肾细胞癌）', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹疼痛等,或者日常活动中发生的钝痛或者隐痛,
+给患者的生活也带来了诸多不便']
+BLEU:0.902028
+49
+1it [00:00, 2.27it/s]train loss:0.880405
+51it [00:21, 2.38it/s]train loss:0.197120
+101it [00:42, 2.53it/s]train loss:1.036353
+151it [01:02, 2.45it/s]train loss:0.313416
+201it [01:22, 2.42it/s]train loss:0.219794
+251it [01:42, 2.47it/s]train loss:0.366032
+301it [02:01, 2.59it/s]train loss:0.256579
+351it [02:20, 2.63it/s]train loss:1.231287
+401it [02:38, 2.79it/s]train loss:0.354426
+451it [02:56, 2.72it/s]train loss:0.242579
+501it [03:13, 2.80it/s]train loss:0.206076
+551it [03:30, 3.01it/s]train loss:1.167916
+601it [03:47, 2.75it/s]train loss:0.528871
+651it [04:03, 3.33it/s]train loss:0.402418
+701it [04:19, 3.06it/s]train loss:1.196991
+751it [04:33, 3.43it/s]train loss:0.288952
+801it [04:47, 4.15it/s]train loss:0.185361
+851it [05:00, 3.33it/s]train loss:0.495626
+901it [05:11, 4.80it/s]train loss:0.791259
+925it [05:14, 2.94it/s]
+['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病pro量表评估患者的脾胃功能并与健康成人进行对照', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟悉症状的机制的理解很差差', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚lr􀒼􀊚cc，遗传性平滑肌瘤病和肾细胞癌）', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹疼痛等,或者日常活动中发生的钝痛或者隐痛']
+BLEU:0.911075
+0it [00:00, ?it/s]55
+1it [00:00, 2.07it/s]train loss:0.237863
+51it [00:22, 2.35it/s]train loss:0.910424
+101it [00:42, 2.40it/s]train loss:0.249112
+151it [01:02, 2.59it/s]train loss:1.102842
+201it [01:22, 2.46it/s]train loss:0.243228
+251it [01:41, 2.53it/s]train loss:1.087232
+301it [02:00, 2.66it/s]train loss:0.680407
+351it [02:19, 2.79it/s]train loss:1.053834
+401it [02:37, 2.84it/s]train loss:0.909666
+451it [02:55, 2.93it/s]train loss:0.795351
+501it [03:13, 2.91it/s]train loss:0.424936
+551it [03:30, 2.99it/s]train loss:1.157255
+601it [03:47, 2.97it/s]train loss:1.049858
+651it [04:02, 3.36it/s]train loss:0.415374
+701it [04:18, 3.10it/s]train loss:0.613275
+751it [04:33, 3.48it/s]train loss:0.488273
+801it [04:47, 4.20it/s]train loss:0.196676
+851it [05:00, 3.30it/s]train loss:0.492288
+901it [05:11, 4.39it/s]train loss:0.577122
+925it [05:14, 2.94it/s]
+0it [00:00, ?it/s]['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病pro量表评估患者的脾胃功能并与健康成人进行对照', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟悉症状的机制的理解很差差症状', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚lr􀒼􀊚cc，遗传性平滑肌瘤病和肾细胞癌）', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹疼痛等,
+或者日常活动中发生的钝痛或者隐痛']
+BLEU:0.901198
+55
+train loss:0.983844
+51it [00:21, 2.37it/s]train loss:0.224406
+101it [00:42, 2.40it/s]train loss:0.226213
+151it [01:02, 2.62it/s]train loss:0.706013
+201it [01:21, 2.46it/s]train loss:0.951578
+251it [01:41, 2.67it/s]train loss:1.127610
+301it [02:00, 2.56it/s]train loss:0.251117
+351it [02:18, 2.71it/s]train loss:0.871003
+401it [02:37, 2.68it/s]train loss:0.277788
+451it [02:55, 2.83it/s]train loss:0.225496
+501it [03:12, 2.81it/s]train loss:0.218152
+551it [03:29, 2.99it/s]train loss:1.341041
+601it [03:46, 2.76it/s]train loss:0.491445
+651it [04:02, 3.36it/s]train loss:0.388538
+701it [04:18, 3.22it/s]train loss:1.185444
+751it [04:32, 3.48it/s]train loss:0.517555
+801it [04:46, 4.23it/s]train loss:0.302703
+851it [04:59, 3.41it/s]train loss:0.479874
+901it [05:09, 4.61it/s]train loss:0.808349
+925it [05:12, 2.96it/s]
+0it [00:00, ?it/s]['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病pro量表评估患者的脾胃功能并与健康成人进行对照', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟悉症状的机制的理解很差', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚lr􀒼􀊚cc，遗传性平滑肌瘤病和肾细胞癌）', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹疼痛等,
+或者日常活动中发生的钝痛或者隐痛']
+BLEU:0.905005
+55
+1it [00:00, 2.07it/s]train loss:0.235561
+51it [00:22, 2.34it/s]train loss:0.195873
+101it [00:42, 2.37it/s]train loss:0.199325
+151it [01:02, 2.47it/s]train loss:0.308671
+201it [01:22, 2.36it/s]train loss:0.206589
+251it [01:42, 2.46it/s]train loss:0.310671
+301it [02:01, 2.77it/s]train loss:0.925133
+351it [02:20, 2.79it/s]train loss:0.907845
+401it [02:38, 2.83it/s]train loss:1.245209
+451it [02:56, 2.87it/s]train loss:0.227360
+501it [03:13, 2.71it/s]train loss:0.193860
+551it [03:30, 2.98it/s]train loss:1.001098
+601it [03:47, 2.79it/s]train loss:0.540355
+651it [04:03, 3.38it/s]train loss:0.381297
+701it [04:19, 3.09it/s]train loss:1.161315
+751it [04:34, 3.42it/s]train loss:0.302478
+801it [04:47, 4.26it/s]train loss:0.186663
+851it [05:00, 3.52it/s]train loss:0.640494
+901it [05:11, 4.68it/s]train loss:0.788124
+925it [05:14, 2.94it/s]
+0it [00:00, ?it/s]['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病pro量表评估患者的脾胃功能并与健康成人进行对', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟悉症状的机制的理解很差', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚lr􀒼􀊚cc，遗传性平滑肌瘤病和肾细胞癌）', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹疼痛等,
+或者日常活动中发生的钝痛或者隐痛']
+BLEU:0.908145
+55
+1it [00:00, 2.31it/s]train loss:1.078622
+51it [00:22, 2.44it/s]train loss:0.596832
+101it [00:42, 2.48it/s]train loss:0.870263
+151it [01:02, 2.46it/s]train loss:1.023096
+201it [01:22, 2.40it/s]train loss:0.218472
+251it [01:41, 2.60it/s]train loss:1.021731
+301it [02:00, 2.71it/s]train loss:0.544039
+351it [02:19, 2.55it/s]train loss:0.265723
+401it [02:37, 2.83it/s]train loss:0.299187
+451it [02:55, 2.82it/s]train loss:0.785092
+501it [03:13, 2.86it/s]train loss:0.682733
+551it [03:30, 2.78it/s]train loss:0.470194
+601it [03:47, 2.78it/s]train loss:0.473466
+651it [04:03, 3.43it/s]train loss:0.960316
+701it [04:19, 3.05it/s]train loss:0.595425
+751it [04:33, 3.40it/s]train loss:0.629735
+801it [04:47, 4.05it/s]train loss:0.377205
+851it [05:00, 3.65it/s]train loss:0.728888
+901it [05:11, 4.82it/s]train loss:0.775616
+925it [05:14, 2.94it/s]
+0it [00:00, ?it/s]['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病pro量表评估患者的脾胃功能并与健康成人进行对照', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟悉症状的机制的理解很差', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚lr􀒼􀊚cc，遗传性平滑肌瘤病和肾细胞癌）', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹疼痛等,
+或者日常活动中发生的钝痛或者隐痛,给患者的生活也带来了诸多不便']
+BLEU:0.910863
+55
+1it [00:00, 2.06it/s]train loss:0.239266
+51it [00:22, 2.42it/s]train loss:0.899021
+101it [00:42, 2.36it/s]train loss:0.241145
+151it [01:02, 2.41it/s]train loss:0.306870
+201it [01:22, 2.43it/s]train loss:0.186742
+251it [01:42, 2.60it/s]train loss:0.973485
+301it [02:01, 2.54it/s]train loss:0.236721
+351it [02:20, 2.68it/s]train loss:0.716307
+401it [02:38, 2.77it/s]train loss:0.312197
+451it [02:56, 2.74it/s]train loss:0.212830
+501it [03:14, 2.77it/s]train loss:0.664192
+551it [03:32, 2.90it/s]train loss:1.141484
+601it [03:48, 2.87it/s]train loss:1.220349
+651it [04:04, 3.47it/s]train loss:1.037129
+701it [04:20, 3.06it/s]train loss:0.571301
+751it [04:34, 3.42it/s]train loss:0.262137
+801it [04:48, 4.15it/s]train loss:0.173221
+851it [05:01, 3.34it/s]train loss:0.474748
+901it [05:12, 4.39it/s]train loss:0.550430
+925it [05:15, 2.93it/s]
+['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病pro量表评估患者的脾胃功能并与健康成人进行对照', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟悉症状的机制的理解很差差症状', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚lr􀒼􀊚cc，遗传性平滑肌瘤病和肾细胞癌）', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹疼痛等,或者日常活动中发生的钝痛或者隐痛']
+BLEU:0.901126
+55
+1it [00:00, 2.32it/s]train loss:1.250036
+51it [00:22, 2.43it/s]train loss:0.725691
+101it [00:42, 2.34it/s]train loss:0.213615
+151it [01:02, 2.52it/s]train loss:0.830123
+201it [01:22, 2.42it/s]train loss:0.187841
+251it [01:42, 2.64it/s]train loss:0.909226
+301it [02:01, 2.62it/s]train loss:0.240095
+351it [02:20, 2.63it/s]train loss:0.247423
+401it [02:38, 2.79it/s]train loss:1.434402
+451it [02:56, 2.87it/s]train loss:0.237049
+501it [03:14, 2.74it/s]train loss:0.181141
+551it [03:31, 2.96it/s]train loss:1.193905
+601it [03:48, 2.93it/s]train loss:1.206689
+651it [04:04, 3.31it/s]train loss:0.390139
+701it [04:20, 3.06it/s]train loss:1.147972
+751it [04:34, 3.31it/s]train loss:0.279218
+801it [04:48, 4.24it/s]train loss:0.168645
+851it [05:01, 3.34it/s]train loss:0.444528
+901it [05:12, 4.34it/s]train loss:0.746684
+925it [05:15, 2.93it/s]
+['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病pro量表评估患者的脾胃功能并与健康成人进行对照', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟悉症状的机制的理解很差差症状', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚lr􀒼􀊚cc，遗传性平滑肌瘤病和肾细胞癌）', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹疼痛等,或者日常活动中发生的钝痛或者痛便便']
+BLEU:0.902787
+55
+1it [00:00, 2.28it/s]train loss:1.215164
+51it [00:21, 2.41it/s]train loss:0.207257
+101it [00:41, 2.39it/s]train loss:0.225920
+151it [01:01, 2.48it/s]train loss:0.286116
+201it [01:21, 2.55it/s]train loss:0.619643
+251it [01:40, 2.65it/s]train loss:0.848709
+301it [01:59, 2.80it/s]train loss:0.746461
+351it [02:17, 2.53it/s]train loss:0.257460
+401it [02:35, 2.82it/s]train loss:0.316843
+451it [02:53, 2.82it/s]train loss:0.654102
+501it [03:11, 2.93it/s]train loss:0.562462
+551it [03:27, 3.05it/s]train loss:1.326806
+601it [03:44, 2.77it/s]train loss:0.495802
+651it [04:00, 3.49it/s]train loss:0.982382
+701it [04:15, 3.09it/s]train loss:0.552035
+751it [04:29, 3.49it/s]train loss:0.584789
+801it [04:43, 4.19it/s]train loss:0.167879
+851it [04:56, 3.46it/s]train loss:0.440139
+901it [05:07, 4.68it/s]train loss:0.544959
+925it [05:10, 2.98it/s]
+0it [00:00, ?it/s]['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病pro量表评估患者的脾胃功能并与健康成人进行对照', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟悉症状的机制的理解很差', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚lr􀒼􀊚cc）', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹疼痛等,
+或者日常活动中发生的钝痛或者的生活也带来了诸多不便']
+BLEU:0.907511
+55
+1it [00:00, 2.32it/s]train loss:0.992847
+51it [00:22, 2.32it/s]train loss:0.171094
+101it [00:42, 2.38it/s]train loss:0.907062
+151it [01:02, 2.48it/s]train loss:0.842535
+201it [01:22, 2.48it/s]train loss:0.731753
+251it [01:41, 2.66it/s]train loss:1.043040
+301it [02:00, 2.67it/s]train loss:0.583632
+351it [02:19, 2.70it/s]train loss:0.720661
+401it [02:37, 2.77it/s]train loss:1.059186
+451it [02:55, 2.80it/s]train loss:0.672583
+501it [03:13, 2.85it/s]train loss:0.355406
+551it [03:30, 2.98it/s]train loss:1.081271
+601it [03:46, 3.02it/s]train loss:1.224944
+651it [04:02, 3.35it/s]train loss:0.418583
+701it [04:18, 3.17it/s]train loss:1.116024
+751it [04:32, 3.51it/s]train loss:0.279696
+801it [04:46, 4.21it/s]train loss:0.167689
+851it [04:59, 3.60it/s]train loss:0.678744
+901it [05:10, 4.27it/s]train loss:0.536900
+925it [05:13, 2.95it/s]
+0it [00:00, ?it/s]['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病pro量表评估患者的脾胃功能并与健康成人进行对照照', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟悉症状的机制的理解很差差', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚lr􀒼􀊚cc，遗传性平滑肌瘤病和肾细胞癌）', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹疼痛等,
+或者日常活动中发生的钝痛或者隐痛']
+BLEU:0.900139
+55
+1it [00:00, 2.27it/s]train loss:0.909806
+51it [00:22, 2.32it/s]train loss:0.170559
+101it [00:43, 2.40it/s]train loss:0.205845
+151it [01:02, 2.49it/s]train loss:0.664282
+201it [01:22, 2.41it/s]train loss:0.176134
+251it [01:42, 2.58it/s]train loss:0.303093
+301it [02:01, 2.64it/s]train loss:0.204330
+351it [02:19, 2.61it/s]train loss:0.284278
+401it [02:37, 2.85it/s]train loss:1.131717
+451it [02:55, 2.89it/s]train loss:0.616931
+501it [03:13, 2.98it/s]train loss:0.412282
+551it [03:30, 2.89it/s]train loss:0.469183
+601it [03:46, 2.91it/s]train loss:1.126876
+651it [04:02, 3.45it/s]train loss:0.900395
+701it [04:18, 3.03it/s]train loss:0.526042
+751it [04:32, 3.37it/s]train loss:0.263686
+801it [04:46, 4.15it/s]train loss:0.164307
+851it [04:59, 3.63it/s]train loss:0.674884
+901it [05:09, 4.55it/s]train loss:0.515863
+925it [05:12, 2.96it/s]
+['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病pro量表评估患者的脾胃功能并与健康成人进行对', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟悉症状的机制的理解很差', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚lr􀒼􀊚cc，遗传性平滑肌瘤病和肾细胞癌）', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹疼痛等,或者日常活动中发生的钝痛或者隐痛']
+BLEU:0.909453
+55
+1it [00:00, 2.07it/s]train loss:0.199622
+51it [00:21, 2.40it/s]train loss:0.824757
+101it [00:42, 2.49it/s]train loss:0.960730
+151it [01:02, 2.46it/s]train loss:0.900408
+201it [01:22, 2.39it/s]train loss:0.188539
+251it [01:41, 2.45it/s]train loss:0.295538
+301it [02:00, 2.69it/s]train loss:0.725025
+351it [02:19, 2.68it/s]train loss:0.831592
+401it [02:37, 2.90it/s]train loss:1.182212
+451it [02:55, 2.79it/s]train loss:0.218723
+501it [03:12, 2.89it/s]train loss:0.216365
+551it [03:30, 2.77it/s]train loss:0.474177
+601it [03:47, 2.85it/s]train loss:1.374501
+651it [04:02, 3.30it/s]train loss:0.391004
+701it [04:18, 3.08it/s]train loss:0.544297
+751it [04:32, 3.43it/s]train loss:0.541375
+801it [04:46, 4.31it/s]train loss:0.168998
+851it [04:59, 3.31it/s]train loss:0.436668
+901it [05:10, 4.52it/s]train loss:0.794256
+925it [05:13, 2.95it/s]
+['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病pro量表评估患者的脾胃功能并与健康成人进行对照', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟悉症状的机制的理解很差差症状', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚lr􀒼􀊚cc）', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹疼痛等,或者日常活动中发生的钝痛或者隐痛']
+BLEU:0.904809
+55
+1it [00:00, 2.05it/s]train loss:0.210577
+51it [00:22, 2.39it/s]train loss:0.699558
+101it [00:42, 2.47it/s]train loss:1.156386
+151it [01:02, 2.51it/s]train loss:0.838839
+201it [01:22, 2.46it/s]train loss:0.195704
+251it [01:42, 2.62it/s]train loss:1.134873
+301it [02:01, 2.61it/s]train loss:0.229574
+351it [02:19, 2.73it/s]train loss:0.882436
+401it [02:37, 2.83it/s]train loss:0.986169
+451it [02:55, 2.77it/s]train loss:0.210589
+501it [03:13, 2.73it/s]train loss:0.185663
+551it [03:30, 2.95it/s]train loss:1.177169
+601it [03:47, 2.88it/s]train loss:0.478964
+651it [04:02, 3.43it/s]train loss:1.139553
+701it [04:18, 2.99it/s]train loss:0.530940
+751it [04:33, 3.47it/s]train loss:0.522237
+801it [04:46, 4.23it/s]train loss:0.161232
+851it [04:59, 3.55it/s]train loss:0.678871
+901it [05:10, 4.77it/s]train loss:0.744689
+925it [05:13, 2.95it/s]
+['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病pro量表评估患者的脾胃功能并与健康成人进行对照', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟悉症状的机制的理解很差', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚lr􀒼􀊚cc，遗传性平滑肌瘤病和肾细胞癌）', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹疼痛等,或者日常活动中发生的钝痛或者隐痛']
+BLEU:0.911183
+0it [00:00, ?it/s]66
+train loss:0.202524
+51it [00:22, 2.29it/s]train loss:0.183925
+101it [00:42, 2.39it/s]train loss:0.957560
+151it [01:02, 2.56it/s]train loss:0.844068
+201it [01:22, 2.42it/s]train loss:0.174363
+251it [01:42, 2.52it/s]train loss:0.290647
+301it [02:01, 2.66it/s]train loss:0.220134
+351it [02:20, 2.61it/s]train loss:0.264874
+401it [02:38, 2.81it/s]train loss:0.305804
+451it [02:56, 2.80it/s]train loss:0.234867
+501it [03:14, 2.84it/s]train loss:0.343673
+551it [03:31, 2.95it/s]train loss:1.171280
+601it [03:48, 2.85it/s]train loss:0.465991
+651it [04:04, 3.43it/s]train loss:0.830019
+701it [04:20, 3.17it/s]train loss:1.259419
+751it [04:34, 3.58it/s]train loss:0.442107
+801it [04:48, 4.06it/s]train loss:0.268432
+851it [05:01, 3.44it/s]train loss:0.632530
+901it [05:12, 4.52it/s]train loss:0.542791
+925it [05:15, 2.93it/s]
+0it [00:00, ?it/s]['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病pro量表评估患者的脾胃功能并与健康成人进行对照', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟悉症状的机制的理解很差差', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚lr􀒼􀊚cc，遗传性平滑肌瘤病和肾细胞癌）', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹疼痛等,
+或者日常活动中发生的钝痛或者隐痛']
+BLEU:0.907954
+66
+train loss:0.204227
+51it [00:22, 2.37it/s]train loss:0.167006
+101it [00:42, 2.39it/s]train loss:0.259819
+151it [01:02, 2.59it/s]train loss:0.810683
+201it [01:22, 2.34it/s]train loss:0.157080
+251it [01:42, 2.46it/s]train loss:0.286349
+301it [02:01, 2.63it/s]train loss:0.741687
+351it [02:19, 2.62it/s]train loss:0.275282
+401it [02:38, 2.76it/s]train loss:0.290217
+451it [02:56, 2.92it/s]train loss:0.656038
+501it [03:14, 2.71it/s]train loss:0.157646
+551it [03:31, 2.78it/s]train loss:0.423162
+601it [03:48, 2.77it/s]train loss:0.465983
+651it [04:04, 3.36it/s]train loss:0.375678
+701it [04:19, 3.12it/s]train loss:1.048755
+751it [04:34, 3.41it/s]train loss:0.592586
+801it [04:48, 4.06it/s]train loss:0.260689
+851it [05:01, 3.51it/s]train loss:0.797785
+901it [05:12, 4.61it/s]train loss:0.716475
+925it [05:15, 2.93it/s]
+0it [00:00, ?it/s]['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病pro量表评估患者的脾胃功能并与健康成人进行对照', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟悉症状的机制的理解很差差症状', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚lr􀒼􀊚cc，遗传性平滑肌瘤病和肾细胞癌）', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹疼痛等,
+或者日常活动中发生的钝痛或者隐痛']
+BLEU:0.905502
+66
+1it [00:00, 2.29it/s]train loss:0.756677
+51it [00:22, 2.37it/s]train loss:0.610278
+101it [00:42, 2.54it/s]train loss:0.873920
+151it [01:02, 2.45it/s]train loss:0.292079
+201it [01:22, 2.47it/s]train loss:0.795612
+251it [01:42, 2.55it/s]train loss:0.861757
+301it [02:01, 2.79it/s]train loss:0.620591
+351it [02:19, 2.71it/s]train loss:0.775092
+401it [02:37, 2.81it/s]train loss:1.171651
+451it [02:56, 2.72it/s]train loss:0.207293
+501it [03:14, 2.79it/s]train loss:0.174078
+551it [03:30, 2.97it/s]train loss:1.140590
+601it [03:48, 2.82it/s]train loss:0.457260
+651it [04:03, 3.40it/s]train loss:0.707345
+701it [04:19, 3.15it/s]train loss:1.066727
+751it [04:34, 3.53it/s]train loss:0.510317
+801it [04:48, 4.14it/s]train loss:0.248973
+851it [05:01, 3.55it/s]train loss:0.813648
+901it [05:12, 4.55it/s]train loss:0.803131
+925it [05:15, 2.93it/s]
+0it [00:00, ?it/s]['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病pro量表评估患者的脾胃功能并与健康成人进行对照', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟悉症状的机制的理解很差', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚lr􀒼􀊚cc）', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹疼痛等,或者日常活动中发生的钝痛或者隐痛']
+BLEU:0.905180
+66
+1it [00:00, 2.30it/s]train loss:0.808690
+51it [00:21, 2.28it/s]train loss:0.182076
+101it [00:42, 2.47it/s]train loss:1.146439
+151it [01:02, 2.45it/s]train loss:0.259160
+201it [01:22, 2.45it/s]train loss:0.165151
+251it [01:41, 2.56it/s]train loss:0.910361
+301it [02:00, 2.71it/s]train loss:0.630910
+351it [02:18, 2.79it/s]train loss:0.703019
+401it [02:36, 2.88it/s]train loss:1.119874
+451it [02:54, 2.78it/s]train loss:0.205305
+501it [03:12, 2.83it/s]train loss:0.367769
+551it [03:29, 2.98it/s]train loss:1.107284
+601it [03:45, 2.74it/s]train loss:0.457841
+651it [04:01, 3.42it/s]train loss:0.933283
+701it [04:17, 3.10it/s]train loss:0.994070
+751it [04:32, 3.53it/s]train loss:0.240150
+801it [04:46, 4.24it/s]train loss:0.365180
+851it [04:58, 3.42it/s]train loss:0.423453
+901it [05:09, 4.50it/s]train loss:0.522156
+925it [05:13, 2.95it/s]
+['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病pro量表评估患者的脾胃功能并与健康成人进行对照', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟悉症状的机制的理解很差', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚lr􀒼􀊚cc，遗传性平滑肌瘤病和肾细胞癌）', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹疼痛等,或者日常活动中发生的钝痛或者隐痛']
+BLEU:0.914053
+70
+1it [00:00, 2.06it/s]train loss:0.177507
+51it [00:22, 2.43it/s]train loss:0.775788
+101it [00:42, 2.41it/s]train loss:0.209142
+151it [01:02, 2.41it/s]train loss:0.282220
+201it [01:22, 2.45it/s]train loss:0.168904
+251it [01:41, 2.54it/s]train loss:0.273082
+301it [02:00, 2.57it/s]train loss:0.206208
+351it [02:19, 2.59it/s]train loss:0.228155
+401it [02:37, 2.67it/s]train loss:0.276348
+451it [02:55, 2.94it/s]train loss:0.671015
+501it [03:13, 2.78it/s]train loss:0.180663
+551it [03:30, 2.91it/s]train loss:0.445796
+601it [03:46, 2.86it/s]train loss:0.457563
+651it [04:02, 3.48it/s]train loss:0.742196
+701it [04:18, 2.89it/s]train loss:0.516237
+751it [04:33, 3.42it/s]train loss:0.532718
+801it [04:47, 4.14it/s]train loss:0.260612
+851it [05:00, 3.61it/s]train loss:0.600776
+901it [05:11, 4.52it/s]train loss:0.728457
+925it [05:14, 2.94it/s]
+0it [00:00, ?it/s]['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病pro量表评估患者的脾胃功能并与健康成人进行对照', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟悉症状的机制的理解很差', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚lr􀒼􀊚cc，遗传性平滑肌瘤病和肾细胞癌）', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹疼痛等,
+或者日常活动中发生的钝痛或者隐痛']
+BLEU:0.910174
+70
+1it [00:00, 2.30it/s]train loss:0.691380
+51it [00:22, 2.32it/s]train loss:0.166623
+101it [00:42, 2.44it/s]train loss:1.159657
+151it [01:02, 2.53it/s]train loss:0.804128
+201it [01:22, 2.50it/s]train loss:0.685220
+251it [01:42, 2.65it/s]train loss:0.719935
+301it [02:01, 2.64it/s]train loss:0.198327
+351it [02:19, 2.81it/s]train loss:0.807216
+401it [02:38, 2.74it/s]train loss:0.284701
+451it [02:56, 2.85it/s]train loss:0.196750
+501it [03:13, 2.87it/s]train loss:0.330005
+551it [03:30, 2.86it/s]train loss:0.428500
+601it [03:47, 2.83it/s]train loss:0.459925
+651it [04:03, 3.34it/s]train loss:0.374348
+701it [04:19, 3.15it/s]train loss:1.069856
+751it [04:33, 3.32it/s]train loss:0.251960
+801it [04:47, 4.22it/s]train loss:0.152175
+851it [05:00, 3.58it/s]train loss:0.599374
+901it [05:11, 4.34it/s]train loss:0.523249
+925it [05:14, 2.94it/s]
+['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病pro量表评估患者的脾胃功能并与健康成人进行对照', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟悉症状的机制的理解很差差', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚lr􀒼􀊚cc）', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹疼痛等,或者日常活动中发生的钝痛或者隐痛']
+BLEU:0.903998
+70
+1it [00:00, 2.30it/s]train loss:0.566490
+51it [00:21, 2.36it/s]train loss:0.154921
+101it [00:42, 2.32it/s]train loss:0.195225
+151it [01:02, 2.47it/s]train loss:0.797899
+201it [01:22, 2.48it/s]train loss:0.655266
+251it [01:41, 2.55it/s]train loss:0.271918
+301it [02:01, 2.72it/s]train loss:0.631061
+351it [02:19, 2.78it/s]train loss:1.019139
+401it [02:38, 2.78it/s]train loss:0.277358
+451it [02:56, 2.83it/s]train loss:0.203957
+501it [03:14, 2.85it/s]train loss:0.351781
+551it [03:31, 2.81it/s]train loss:0.441662
+601it [03:47, 2.94it/s]train loss:1.083029
+651it [04:03, 3.35it/s]train loss:0.383880
+701it [04:19, 3.10it/s]train loss:1.239295
+751it [04:33, 3.48it/s]train loss:0.247116
+801it [04:47, 4.07it/s]train loss:0.247462
+851it [05:00, 3.54it/s]train loss:0.601816
+901it [05:11, 4.38it/s]train loss:0.522515
+925it [05:15, 2.94it/s]
+['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病pro量表评估患者的脾胃功能并与健康成人进行对照', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟悉症状的机制的理解很差', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚lr􀒼􀊚cc，遗传性平滑肌瘤病和肾细胞癌）', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹疼痛等,或者日常活动中发生的钝痛或者隐痛']
+BLEU:0.913750
+70
+1it [00:00, 2.29it/s]train loss:0.760504
+51it [00:22, 2.31it/s]train loss:0.583454
+101it [00:43, 2.41it/s]train loss:0.794302
+151it [01:03, 2.40it/s]train loss:0.253690
+201it [01:22, 2.51it/s]train loss:0.810201
+251it [01:42, 2.59it/s]train loss:1.105741
+301it [02:01, 2.72it/s]train loss:0.499370
+351it [02:20, 2.72it/s]train loss:0.625041
+401it [02:38, 2.73it/s]train loss:0.258087
+451it [02:56, 2.85it/s]train loss:0.567569
+501it [03:14, 2.75it/s]train loss:0.167837
+551it [03:31, 2.99it/s]train loss:1.194692
+601it [03:48, 2.91it/s]train loss:1.196211
+651it [04:04, 3.27it/s]train loss:0.357094
+701it [04:20, 3.03it/s]train loss:0.516144
+751it [04:34, 3.35it/s]train loss:0.254136
+801it [04:48, 4.21it/s]train loss:0.262134
+851it [05:01, 3.52it/s]train loss:0.589854
+901it [05:12, 4.32it/s]train loss:0.511379
+925it [05:15, 2.93it/s]
+0it [00:00, ?it/s]['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病pro量表评估患者的脾胃功能并与健康成人进行对照', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟悉症状的机制的理解很差', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚lr􀒼􀊚cc，遗传性平滑肌瘤病和肾细胞癌）', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹疼痛等,
+或者日常活动中发生的钝痛或者隐痛']
+BLEU:0.913593
+70
+train loss:0.184431
+51it [00:22, 2.42it/s]train loss:0.445801
+101it [00:42, 2.44it/s]train loss:0.871354
+151it [01:02, 2.42it/s]train loss:0.269072
+201it [01:22, 2.47it/s]train loss:0.539214
+251it [01:42, 2.53it/s]train loss:0.257108
+301it [02:01, 2.54it/s]train loss:0.183416
+351it [02:20, 2.76it/s]train loss:0.747456
+401it [02:38, 2.68it/s]train loss:0.269474
+451it [02:56, 2.78it/s]train loss:0.712763
+501it [03:14, 2.85it/s]train loss:0.326663
+551it [03:31, 2.81it/s]train loss:0.423280
+601it [03:48, 2.77it/s]train loss:0.458624
+651it [04:04, 3.37it/s]train loss:0.368454
+701it [04:20, 3.23it/s]train loss:1.003833
+751it [04:35, 3.50it/s]train loss:0.654602
+801it [04:48, 4.27it/s]train loss:0.148740
+851it [05:01, 3.24it/s]train loss:0.407697
+901it [05:12, 4.29it/s]train loss:0.498827
+925it [05:16, 2.92it/s]
+['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病pro量表评估患者的脾胃功能并与健康成人进行对照', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟悉症状的机制的理解很差差', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚lr􀒼􀊚cc，遗传性平滑肌瘤病和肾细胞癌）', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹疼痛等,或者日常活动中发生的钝痛或者隐痛']
+BLEU:0.916079
+75
+1it [00:00, 2.26it/s]train loss:0.548932
+51it [00:21, 2.36it/s]train loss:0.595922
+101it [00:42, 2.41it/s]train loss:0.226294
+151it [01:02, 2.47it/s]train loss:0.252013
+201it [01:22, 2.40it/s]train loss:0.175492
+251it [01:41, 2.59it/s]train loss:1.087322
+301it [02:00, 2.60it/s]train loss:0.211576
+351it [02:19, 2.64it/s]train loss:0.717927
+401it [02:38, 2.76it/s]train loss:1.102359
+451it [02:56, 2.70it/s]train loss:0.207458
+501it [03:14, 2.81it/s]train loss:0.429947
+551it [03:31, 2.89it/s]train loss:1.165808
+601it [03:48, 2.70it/s]train loss:0.421095
+651it [04:04, 3.45it/s]train loss:1.139106
+701it [04:20, 3.00it/s]train loss:0.493992
+751it [04:35, 3.47it/s]train loss:0.231951
+801it [04:48, 4.31it/s]train loss:0.142725
+851it [05:01, 3.53it/s]train loss:0.587135
+901it [05:12, 4.36it/s]train loss:0.733608
+925it [05:16, 2.93it/s]
+0it [00:00, ?it/s]['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病pro量表评估患者的脾胃功能并与健康成人进行对照', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟悉症状的机制的理解很差差', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚lr􀒼􀊚cc，遗传性平滑肌瘤病和肾细胞癌）', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹疼痛等,
+或者日常活动中发生的钝痛或者隐痛']
+BLEU:0.911795
+75
+train loss:0.167757
+51it [00:22, 2.35it/s]train loss:0.168415
+101it [00:42, 2.37it/s]train loss:0.195885
+151it [01:02, 2.53it/s]train loss:0.890415
+201it [01:22, 2.57it/s]train loss:0.789965
+251it [01:42, 2.55it/s]train loss:0.257309
+301it [02:01, 2.59it/s]train loss:0.190290
+351it [02:20, 2.55it/s]train loss:0.250386
+401it [02:38, 2.85it/s]train loss:1.114022
+451it [02:56, 2.83it/s]train loss:0.200371
+501it [03:14, 2.74it/s]train loss:0.177373
+551it [03:31, 2.91it/s]train loss:1.168564
+601it [03:49, 2.72it/s]train loss:0.425418
+651it [04:05, 3.36it/s]train loss:0.762986
+701it [04:21, 2.85it/s]train loss:0.516590
+751it [04:36, 3.30it/s]train loss:0.237174
+801it [04:50, 4.08it/s]train loss:0.217948
+851it [05:03, 3.39it/s]train loss:0.404885
+901it [05:14, 4.28it/s]train loss:0.740478
+925it [05:18, 2.91it/s]
+0it [00:00, ?it/s]['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病pro量表评估患者的脾胃功能并与健康成人进行对照', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟悉症状的机制的理解很差差症状', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚lr􀒼􀊚cc，遗传性平滑肌瘤病和肾细胞癌）', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹疼痛等,
+或者日常活动中发生的钝痛或者隐痛']
+BLEU:0.910299
+75
+1it [00:00, 2.05it/s]train loss:0.192979
+51it [00:22, 2.28it/s]train loss:0.151574
+101it [00:42, 2.50it/s]train loss:1.253558
+151it [01:02, 2.46it/s]train loss:0.256708
+201it [01:22, 2.33it/s]train loss:0.162523
+251it [01:42, 2.47it/s]train loss:0.251894
+301it [02:01, 2.65it/s]train loss:0.454965
+351it [02:20, 2.69it/s]train loss:0.658630
+401it [02:38, 2.77it/s]train loss:1.089626
+451it [02:56, 2.82it/s]train loss:0.591465
+501it [03:14, 2.95it/s]train loss:0.353402
+551it [03:31, 3.07it/s]train loss:1.177539
+601it [03:47, 2.89it/s]train loss:1.025164
+651it [04:03, 3.33it/s]train loss:0.366515
+701it [04:18, 3.06it/s]train loss:0.509081
+751it [04:33, 3.48it/s]train loss:0.459409
+801it [04:47, 4.27it/s]train loss:0.253431
+851it [04:59, 3.39it/s]train loss:0.401418
+901it [05:10, 4.37it/s]train loss:0.496866
+925it [05:14, 2.94it/s]
+0it [00:00, ?it/s]['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病pro量表评估患者的脾胃功能并与健康成人进行对照', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟悉症状的机制的理解很差差症状', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚lr􀒼􀊚cc，遗传性平滑肌瘤病和肾细胞癌）', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹疼痛等,
+或者日常活动中发生的钝痛或者隐痛']
+BLEU:0.911924
+75
+1it [00:00, 2.27it/s]train loss:0.733895
+51it [00:21, 2.31it/s]train loss:0.167438
+101it [00:42, 2.34it/s]train loss:0.195409
+151it [01:02, 2.51it/s]train loss:0.240860
+201it [01:21, 2.45it/s]train loss:0.664467
+251it [01:41, 2.47it/s]train loss:0.237901
+301it [02:00, 2.70it/s]train loss:0.187574
+351it [02:18, 2.77it/s]train loss:0.764490
+401it [02:36, 2.86it/s]train loss:0.926473
+451it [02:54, 2.79it/s]train loss:0.221904
+501it [03:12, 2.85it/s]train loss:0.379839
+551it [03:29, 2.92it/s]train loss:0.435759
+601it [03:46, 2.90it/s]train loss:0.455293
+651it [04:02, 3.41it/s]train loss:0.732056
+701it [04:17, 2.87it/s]train loss:0.497655
+751it [04:32, 3.54it/s]train loss:0.232433
+801it [04:46, 4.15it/s]train loss:0.232015
+851it [04:59, 3.66it/s]train loss:0.627586
+901it [05:09, 4.53it/s]train loss:0.499068
+925it [05:13, 2.95it/s]
+['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病pro量表评估患者的脾胃功能并与健康成人进行对照', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟悉症状的机制的理解很差差', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚lr􀒼􀊚cc，遗传性平滑肌瘤病和肾细胞癌）', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹疼痛等,或者日常活动中发生的钝痛或者隐痛']
+BLEU:0.917137
+79
+1it [00:00, 2.31it/s]train loss:0.425081
+51it [00:21, 2.49it/s]train loss:0.550492
+101it [00:42, 2.49it/s]train loss:0.926089
+151it [01:02, 2.52it/s]train loss:0.233110
+201it [01:21, 2.47it/s]train loss:0.153236
+251it [01:41, 2.58it/s]train loss:0.238516
+301it [01:59, 2.60it/s]train loss:0.605902
+351it [02:18, 2.66it/s]train loss:0.229744
+401it [02:36, 2.78it/s]train loss:0.915383
+451it [02:54, 2.82it/s]train loss:0.196359
+501it [03:12, 2.73it/s]train loss:0.163581
+551it [03:29, 2.83it/s]train loss:0.435545
+601it [03:46, 2.85it/s]train loss:0.429809
+651it [04:01, 3.47it/s]train loss:0.863662
+701it [04:17, 3.14it/s]train loss:1.009617
+751it [04:31, 3.58it/s]train loss:0.489528
+801it [04:45, 4.28it/s]train loss:0.155652
+851it [04:58, 3.30it/s]train loss:0.410801
+901it [05:09, 4.72it/s]train loss:0.768957
+925it [05:12, 2.96it/s]
+['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病pro量表评估患者的脾胃功能并与健康成人进行对照', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟悉症状的机制的理解很差差', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚lr􀒼􀊚cc，遗传性平滑肌瘤病和肾细胞癌）', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹疼痛等,或者日常活动中发生的钝痛或者隐痛']
+BLEU:0.907704
+79
+1it [00:00, 2.29it/s]train loss:0.710817
+51it [00:21, 2.37it/s]train loss:0.466235
+101it [00:42, 2.42it/s]train loss:0.971581
+151it [01:02, 2.62it/s]train loss:0.781522
+201it [01:21, 2.54it/s]train loss:0.745491
+251it [01:41, 2.61it/s]train loss:0.972931
+301it [01:59, 2.72it/s]train loss:0.196432
+351it [02:18, 2.54it/s]train loss:0.244069
+401it [02:36, 2.68it/s]train loss:0.265666
+451it [02:54, 2.77it/s]train loss:0.714962
+501it [03:12, 2.82it/s]train loss:0.341239
+551it [03:29, 2.79it/s]train loss:0.417337
+601it [03:46, 2.77it/s]train loss:0.456521
+651it [04:02, 3.36it/s]train loss:0.363046
+701it [04:17, 3.05it/s]train loss:1.110733
+751it [04:32, 3.46it/s]train loss:0.235180
+801it [04:46, 4.11it/s]train loss:0.200876
+851it [04:59, 3.56it/s]train loss:0.615546
+901it [05:10, 4.46it/s]train loss:0.728829
+925it [05:14, 2.95it/s]
+['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病pro量表评估患者的脾胃功能并与健康成人进行对照', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟悉症状的机制的理解很差差', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚lr􀒼􀊚cc，遗传性平滑肌瘤病和肾细胞癌）', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹疼痛等,或者日常活动中发生的钝痛或者隐痛']
+BLEU:0.913440
+79
+1it [00:00, 2.07it/s]train loss:0.163033
+51it [00:22, 2.31it/s]train loss:0.154966
+101it [00:42, 2.42it/s]train loss:0.194593
+151it [01:02, 2.42it/s]train loss:0.235749
+201it [01:22, 2.51it/s]train loss:0.491540
+251it [01:41, 2.65it/s]train loss:0.845254
+301it [02:00, 2.60it/s]train loss:0.191186
+351it [02:19, 2.68it/s]train loss:0.698077
+401it [02:37, 2.82it/s]train loss:1.071606
+451it [02:55, 2.78it/s]train loss:0.198632
+501it [03:13, 2.81it/s]train loss:0.157926
+551it [03:30, 3.00it/s]train loss:1.266779
+601it [03:46, 2.94it/s]train loss:1.102776
+651it [04:02, 3.40it/s]train loss:0.366309
+701it [04:18, 3.05it/s]train loss:1.062180
+751it [04:32, 3.51it/s]train loss:0.436406
+801it [04:46, 4.17it/s]train loss:0.196441
+851it [04:59, 3.40it/s]train loss:0.394377
+901it [05:09, 4.50it/s]train loss:0.688000
+925it [05:13, 2.95it/s]
+0it [00:00, ?it/s]['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病pro量表评估患者的脾胃功能并与健康成人进行对照', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟悉症状的机制的理解很差差症状', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚lr􀒼􀊚cc，遗传性平滑肌瘤病和肾细胞癌）', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹疼痛等,
+或者日常活动中发生的钝痛或者隐痛']
+BLEU:0.912406
+79
+1it [00:00, 2.32it/s]train loss:0.828662
+51it [00:21, 2.33it/s]train loss:0.154493
+101it [00:42, 2.43it/s]train loss:1.015138
+151it [01:02, 2.49it/s]train loss:0.228997
+201it [01:22, 2.44it/s]train loss:0.141069
+251it [01:41, 2.66it/s]train loss:0.949968
+301it [02:00, 2.78it/s]train loss:0.603760
+351it [02:19, 2.75it/s]train loss:0.656011
+401it [02:37, 2.82it/s]train loss:0.269073
+451it [02:55, 2.87it/s]train loss:0.698572
+501it [03:13, 2.74it/s]train loss:0.152300
+551it [03:30, 2.98it/s]train loss:1.121121
+601it [03:47, 2.93it/s]train loss:1.250177
+651it [04:02, 3.42it/s]train loss:0.924589
+701it [04:18, 2.96it/s]train loss:0.497290
+751it [04:32, 3.42it/s]train loss:0.236323
+801it [04:46, 4.24it/s]train loss:0.172785
+851it [04:59, 3.29it/s]train loss:0.394742
+901it [05:10, 4.58it/s]train loss:0.488513
+925it [05:13, 2.95it/s]
+['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病pro量表评估患者的脾胃功能并与健康成人进行对照', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟悉症状的机制的理解很差差', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚lr􀒼􀊚cc，遗传性平滑肌瘤病和肾细胞癌）', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹疼痛等,或者日常活动中发生的钝痛或者隐痛']
+BLEU:0.914759
+79
+1it [00:00, 2.06it/s]train loss:0.141230
+51it [00:22, 2.30it/s]train loss:0.148728
+101it [00:42, 2.39it/s]train loss:0.194445
+151it [01:02, 2.54it/s]train loss:0.620376
+201it [01:22, 2.49it/s]train loss:0.152352
+251it [01:42, 2.62it/s]train loss:0.751538
+301it [02:01, 2.64it/s]train loss:0.190246
+351it [02:19, 2.73it/s]train loss:0.657802
+401it [02:38, 2.77it/s]train loss:0.882030
+451it [02:56, 2.85it/s]train loss:0.196130
+501it [03:13, 2.89it/s]train loss:0.320534
+551it [03:30, 2.93it/s]train loss:0.427432
+601it [03:47, 2.77it/s]train loss:0.425475
+651it [04:03, 3.31it/s]train loss:0.360197
+701it [04:19, 3.01it/s]train loss:0.977143
+751it [04:33, 3.48it/s]train loss:0.411563
+801it [04:47, 4.19it/s]train loss:0.204263
+851it [05:00, 3.39it/s]train loss:0.390464
+901it [05:11, 4.36it/s]train loss:0.480173
+925it [05:14, 2.94it/s]
+['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病pro量表评估患者的脾胃功能并与健康成人进行对照', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟悉症状的机制的理解很差差', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚lr􀒼􀊚cc，遗传性平滑肌瘤病和肾细胞癌）', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹疼痛等,或者日常活动中发生的钝痛或者隐痛']
+BLEU:0.907809
+79
+1it [00:00, 2.30it/s]train loss:1.213965
+51it [00:21, 2.38it/s]train loss:0.660346
+101it [00:42, 2.37it/s]train loss:0.215825
+151it [01:02, 2.43it/s]train loss:0.257987
+201it [01:22, 2.49it/s]train loss:0.682527
+251it [01:41, 2.49it/s]train loss:0.252661
+301it [02:00, 2.66it/s]train loss:0.413555
+351it [02:19, 2.57it/s]train loss:0.224991
+401it [02:37, 2.84it/s]train loss:1.015962
+451it [02:55, 2.86it/s]train loss:0.192866
+501it [03:13, 2.76it/s]train loss:0.154256
+551it [03:30, 2.82it/s]train loss:0.421546
+601it [03:47, 2.85it/s]train loss:0.417173
+651it [04:03, 3.46it/s]train loss:1.026349
+701it [04:18, 3.04it/s]train loss:0.497345
+751it [04:33, 3.46it/s]train loss:0.231777
+801it [04:47, 4.23it/s]train loss:0.214413
+851it [04:59, 3.41it/s]train loss:0.390669
+901it [05:10, 4.38it/s]train loss:0.470803
+925it [05:13, 2.95it/s]
+['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病pro量表评估患者的脾胃功能并与健康成人进行对照', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟悉症状的机制的理解很差', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚lr􀒼􀊚cc，遗传性平滑肌瘤病和肾细胞癌）', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹疼痛等,或者日常活动中发生的钝痛或者隐痛']
+BLEU:0.917478
+85
+1it [00:00, 2.06it/s]train loss:0.150710
+51it [00:22, 2.46it/s]train loss:0.577054
+101it [00:43, 2.34it/s]train loss:0.171724
+151it [01:02, 2.53it/s]train loss:0.232706
+201it [01:22, 2.48it/s]train loss:0.167732
+251it [01:41, 2.56it/s]train loss:0.232558
+301it [02:00, 2.54it/s]train loss:0.174887
+351it [02:19, 2.62it/s]train loss:0.218614
+401it [02:37, 2.88it/s]train loss:0.961813
+451it [02:55, 2.87it/s]train loss:0.602335
+501it [03:13, 2.96it/s]train loss:0.304642
+551it [03:30, 2.94it/s]train loss:0.408239
+601it [03:46, 2.87it/s]train loss:0.414744
+651it [04:02, 3.55it/s]train loss:0.810158
+701it [04:17, 3.24it/s]train loss:0.983682
+751it [04:32, 3.47it/s]train loss:0.228467
+801it [04:45, 4.29it/s]train loss:0.135675
+851it [04:58, 3.51it/s]train loss:0.597851
+901it [05:09, 4.45it/s]train loss:0.683779
+925it [05:12, 2.96it/s]
+['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病pro量表评估患者的脾胃功能并与健康成人进行对照', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟悉症状的机制的理解很差', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚lr􀒼􀊚cc，遗传性平滑肌瘤病和肾细胞癌）', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹疼痛等,或者日常活动中发生的钝痛或者隐痛']
+BLEU:0.914577
+85
+1it [00:00, 2.28it/s]train loss:0.530924
+51it [00:21, 2.48it/s]train loss:0.534219
+101it [00:42, 2.47it/s]train loss:0.183309
+151it [01:01, 2.40it/s]train loss:0.230849
+201it [01:21, 2.41it/s]train loss:0.141589
+251it [01:41, 2.64it/s]train loss:0.826805
+301it [02:00, 2.50it/s]train loss:0.163461
+351it [02:18, 2.73it/s]train loss:0.715118
+401it [02:36, 2.71it/s]train loss:0.242276
+451it [02:54, 2.70it/s]train loss:0.184460
+501it [03:12, 2.79it/s]train loss:0.153566
+551it [03:29, 2.84it/s]train loss:0.402338
+601it [03:46, 2.92it/s]train loss:1.270152
+651it [04:02, 3.33it/s]train loss:0.365253
+701it [04:18, 3.15it/s]train loss:1.007186
+751it [04:32, 3.43it/s]train loss:0.400964
+801it [04:46, 4.22it/s]train loss:0.259319
+851it [04:59, 3.39it/s]train loss:0.378766
+901it [05:10, 4.44it/s]train loss:0.480255
+925it [05:13, 2.95it/s]
+['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病pro量表评估患者的脾胃功能并与健康成人进行对照', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟悉症状的机制的理解很差', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚lr􀒼􀊚cc，遗传性平滑肌瘤病和肾细胞癌）', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹疼痛等,或者日常活动中发生的钝痛或者隐痛']
+BLEU:0.915038
+85
+1it [00:00, 2.06it/s]train loss:0.172861
+51it [00:22, 2.39it/s]train loss:0.690661
+101it [00:42, 2.38it/s]train loss:0.169559
+151it [01:02, 2.46it/s]train loss:0.236650
+201it [01:22, 2.34it/s]train loss:0.150040
+251it [01:42, 2.45it/s]train loss:0.229931
+301it [02:02, 2.50it/s]train loss:0.169477
+351it [02:20, 2.72it/s]train loss:0.604659
+401it [02:38, 2.70it/s]train loss:0.251497
+451it [02:56, 2.78it/s]train loss:0.181418
+501it [03:14, 2.86it/s]train loss:0.324243
+551it [03:31, 2.93it/s]train loss:1.106786
+601it [03:47, 2.77it/s]train loss:0.424173
+651it [04:03, 3.50it/s]train loss:0.923967
+701it [04:19, 3.10it/s]train loss:0.472948
+751it [04:33, 3.38it/s]train loss:0.220385
+801it [04:47, 4.30it/s]train loss:0.213075
+851it [05:00, 3.58it/s]train loss:0.612840
+901it [05:10, 4.43it/s]train loss:0.466992
+925it [05:14, 2.94it/s]
+0it [00:00, ?it/s]['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病pro量表评估患者的脾胃功能并与健康成人进行对照', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟悉症状的机制的理解很差', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚lr􀒼􀊚cc，遗传性平滑肌瘤病和肾细胞癌）', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹疼痛等,
+或者日常活动中发生的钝痛或者隐痛']
+BLEU:0.915650
+85
+1it [00:00, 2.06it/s]train loss:0.137610
+51it [00:21, 2.35it/s]train loss:0.160133
+101it [00:42, 2.40it/s]train loss:0.190866
+151it [01:01, 2.59it/s]train loss:0.772948
+201it [01:21, 2.41it/s]train loss:0.141536
+251it [01:41, 2.47it/s]train loss:0.227274
+301it [02:00, 2.55it/s]train loss:0.175542
+351it [02:19, 2.65it/s]train loss:0.207685
+401it [02:37, 2.85it/s]train loss:0.970923
+451it [02:54, 2.87it/s]train loss:0.178425
+501it [03:12, 2.87it/s]train loss:0.411670
+551it [03:29, 2.85it/s]train loss:0.401789
+601it [03:45, 2.88it/s]train loss:1.012257
+651it [04:01, 3.30it/s]train loss:0.351378
+701it [04:17, 3.06it/s]train loss:0.947665
+751it [04:31, 3.45it/s]train loss:0.228168
+801it [04:45, 4.27it/s]train loss:0.137714
+851it [04:57, 3.64it/s]train loss:0.567222
+901it [05:08, 4.57it/s]train loss:0.478447
+925it [05:11, 2.97it/s]
+0it [00:00, ?it/s]['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病pro量表评估患者的脾胃功能并与健康成人进行对照', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟悉症状的机制的理解很差', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚lr􀒼􀊚cc，遗传性平滑肌瘤病和肾细胞癌）', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹疼痛等,
+或者日常活动中发生的钝痛或者隐痛']
+BLEU:0.912712
+85
+1it [00:00, 2.06it/s]train loss:0.158538
+51it [00:22, 2.31it/s]train loss:0.144444
+101it [00:42, 2.37it/s]train loss:0.183409
+151it [01:02, 2.62it/s]train loss:0.712011
+201it [01:21, 2.53it/s]train loss:0.663572
+251it [01:41, 2.58it/s]train loss:0.231341
+301it [02:00, 2.58it/s]train loss:0.171266
+351it [02:18, 2.54it/s]train loss:0.219466
+401it [02:37, 2.77it/s]train loss:0.244895
+451it [02:54, 2.80it/s]train loss:0.179868
+501it [03:12, 2.90it/s]train loss:0.313479
+551it [03:29, 2.88it/s]train loss:0.402234
+601it [03:45, 2.89it/s]train loss:0.410894
+651it [04:01, 3.46it/s]train loss:1.022223
+701it [04:16, 3.09it/s]train loss:1.078574
+751it [04:31, 3.45it/s]train loss:0.628075
+801it [04:45, 4.19it/s]train loss:0.222819
+851it [04:57, 3.37it/s]train loss:0.392216
+901it [05:08, 4.86it/s]train loss:0.757276
+925it [05:11, 2.97it/s]
+0it [00:00, ?it/s]['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病pro量表评估患者的脾胃功能并与健康成人进行对照', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟悉症状的机制的理解很差', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚lr􀒼􀊚cc，遗传性平滑肌瘤病和肾细胞癌）', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹疼痛等,
+或者日常活动中发生的钝痛或者隐痛']
+BLEU:0.914235
+85
+1it [00:00, 2.33it/s]train loss:0.487580
+51it [00:21, 2.32it/s]train loss:0.151664
+101it [00:42, 2.42it/s]train loss:0.171289
+151it [01:02, 2.47it/s]train loss:0.211829
+201it [01:22, 2.54it/s]train loss:0.644769
+251it [01:41, 2.63it/s]train loss:0.840094
+301it [02:00, 2.53it/s]train loss:0.185071
+351it [02:18, 2.57it/s]train loss:0.218528
+401it [02:36, 2.78it/s]train loss:0.263542
+451it [02:54, 2.83it/s]train loss:0.170902
+501it [03:12, 3.01it/s]train loss:0.313958
+551it [03:29, 2.88it/s]train loss:0.392324
+601it [03:45, 2.87it/s]train loss:0.426466
+651it [04:01, 3.54it/s]train loss:0.889541
+701it [04:16, 3.13it/s]train loss:1.035067
+751it [04:31, 3.48it/s]train loss:0.230309
+801it [04:44, 4.28it/s]train loss:0.129478
+851it [04:57, 3.37it/s]train loss:0.381200
+901it [05:08, 4.83it/s]train loss:0.700228
+925it [05:11, 2.97it/s]
+0it [00:00, ?it/s]['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病pro量表评估患者的脾胃功能并与健康成人进行对照', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟悉症状的机制的理解很差', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚lr􀒼􀊚cc，遗传性平滑肌瘤病和肾细胞癌）', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹疼痛等,
+或者日常活动中发生的钝痛或者隐痛']
+BLEU:0.915518
+85
+1it [00:00, 2.27it/s]train loss:0.439944
+51it [00:21, 2.44it/s]train loss:0.539598
+101it [00:42, 2.35it/s]train loss:0.167046
+151it [01:02, 2.45it/s]train loss:0.221258
+201it [01:21, 2.51it/s]train loss:0.436626
+251it [01:41, 2.53it/s]train loss:0.893424
+301it [02:00, 2.64it/s]train loss:0.177380
+351it [02:18, 2.70it/s]train loss:0.714397
+401it [02:36, 2.78it/s]train loss:0.977318
+451it [02:54, 2.81it/s]train loss:0.656729
+501it [03:11, 2.85it/s]train loss:0.152300
+551it [03:28, 2.99it/s]train loss:1.056415
+601it [03:45, 2.99it/s]train loss:1.188462
+651it [04:01, 3.45it/s]train loss:0.771262
+701it [04:16, 3.08it/s]train loss:0.965561
+751it [04:30, 3.53it/s]train loss:0.224777
+801it [04:44, 4.26it/s]train loss:0.130483
+851it [04:56, 3.63it/s]train loss:0.565290
+901it [05:07, 4.52it/s]train loss:0.693176
+925it [05:10, 2.98it/s]
+0it [00:00, ?it/s]['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病pro量表评估患者的脾胃功能并与健康成人进行对照', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟悉症状的机制的理解很差', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚lr􀒼􀊚cc，遗传性平滑肌瘤病和肾细胞癌）', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹疼痛等,
+或者日常活动中发生的钝痛或者隐痛']
+BLEU:0.912802
+85
+1it [00:00, 2.05it/s]train loss:0.159650
+51it [00:22, 2.35it/s]train loss:0.148155
+101it [00:42, 2.37it/s]train loss:0.179970
+151it [01:02, 2.45it/s]train loss:0.213256
+201it [01:22, 2.55it/s]train loss:0.491871
+251it [01:42, 2.66it/s]train loss:0.798109
+301it [02:00, 2.63it/s]train loss:0.185310
+351it [02:19, 2.67it/s]train loss:0.220887
+401it [02:37, 2.83it/s]train loss:0.251288
+451it [02:54, 2.84it/s]train loss:0.500924
+501it [03:12, 2.75it/s]train loss:0.159448
+551it [03:29, 3.01it/s]train loss:0.983600
+601it [03:46, 3.01it/s]train loss:1.079738
+651it [04:01, 3.43it/s]train loss:0.355745
+701it [04:17, 3.05it/s]train loss:0.903013
+751it [04:31, 3.49it/s]train loss:0.512813
+801it [04:45, 4.17it/s]train loss:0.192806
+851it [04:58, 3.46it/s]train loss:0.387827
+901it [05:08, 4.47it/s]train loss:0.474376
+925it [05:12, 2.96it/s]
+0it [00:00, ?it/s]['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病pro量表评估患者的脾胃功能并与健康成人进行对照', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟悉症状的机制的理解很差', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚lr􀒼􀊚cc，遗传性平滑肌瘤病和肾细胞癌）', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹疼痛等,
+或者日常活动中发生的钝痛或者隐痛']
+BLEU:0.913588
+85
+1it [00:00, 2.29it/s]train loss:0.481290
+51it [00:21, 2.39it/s]train loss:0.475907
+101it [00:42, 2.35it/s]train loss:0.176795
+151it [01:02, 2.41it/s]train loss:0.235855
+201it [01:21, 2.58it/s]train loss:0.387119
+251it [01:41, 2.59it/s]train loss:0.696871
+301it [02:00, 2.67it/s]train loss:0.183682
+351it [02:18, 2.63it/s]train loss:0.756684
+401it [02:36, 2.80it/s]train loss:1.038433
+451it [02:54, 2.77it/s]train loss:0.177257
+501it [03:12, 2.83it/s]train loss:0.154992
+551it [03:29, 2.89it/s]train loss:0.405501
+601it [03:46, 2.91it/s]train loss:1.218359
+651it [04:01, 3.39it/s]train loss:0.360999
+701it [04:17, 3.13it/s]train loss:0.487478
+751it [04:31, 3.62it/s]train loss:0.423533
+801it [04:45, 4.26it/s]train loss:0.215739
+851it [04:58, 3.69it/s]train loss:0.612992
+901it [05:08, 4.37it/s]train loss:0.473520
+925it [05:12, 2.96it/s]
+0it [00:00, ?it/s]['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病pro量表评估患者的脾胃功能并与健康成人进行对照', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟悉症状的机制的理解很差', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚lr􀒼􀊚cc，遗传性平滑肌瘤病和肾细胞癌）', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹疼痛等,
+或者日常活动中发生的钝痛或者隐痛']
+BLEU:0.913038
+85
+train loss:0.153103
+51it [00:21, 2.46it/s]train loss:0.533197
+101it [00:42, 2.41it/s]train loss:0.164980
+151it [01:02, 2.54it/s]train loss:0.770909
+201it [01:22, 2.53it/s]train loss:0.469126
+251it [01:42, 2.52it/s]train loss:0.222215
+301it [02:01, 2.77it/s]train loss:0.643227
+351it [02:19, 2.77it/s]train loss:0.656573
+401it [02:37, 2.78it/s]train loss:0.246513
+451it [02:55, 2.97it/s]train loss:0.454772
+501it [03:13, 2.76it/s]train loss:0.155412
+551it [03:30, 2.81it/s]train loss:0.402759
+601it [03:46, 2.82it/s]train loss:0.396951
+651it [04:02, 3.31it/s]train loss:0.353422
+701it [04:18, 3.06it/s]train loss:0.985097
+751it [04:32, 3.55it/s]train loss:0.233700
+801it [04:46, 4.19it/s]train loss:0.199218
+851it [04:58, 3.57it/s]train loss:0.553994
+901it [05:09, 4.76it/s]train loss:0.704690
+925it [05:12, 2.96it/s]
+0it [00:00, ?it/s]['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病pro量表评估患者的脾胃功能并与健康成人进行对照', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟悉症状的机制的理解很差差', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚lr􀒼􀊚cc，遗传性平滑肌瘤病和肾细胞癌）', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹疼痛等,
+或者日常活动中发生的钝痛或者隐痛']
+BLEU:0.914466
+85
+1it [00:00, 2.05it/s]train loss:0.151294
+51it [00:21, 2.48it/s]train loss:0.440264
+101it [00:41, 2.50it/s]train loss:0.994635
+151it [01:01, 2.49it/s]train loss:0.607484
+201it [01:21, 2.49it/s]train loss:0.157381
+251it [01:41, 2.45it/s]train loss:0.216305
+301it [02:00, 2.61it/s]train loss:0.172864
+351it [02:18, 2.63it/s]train loss:0.664286
+401it [02:36, 2.76it/s]train loss:0.234424
+451it [02:54, 2.85it/s]train loss:0.172079
+501it [03:11, 2.99it/s]train loss:0.323163
+551it [03:28, 2.94it/s]train loss:1.132020
+601it [03:45, 2.82it/s]train loss:0.413739
+651it [04:01, 3.38it/s]train loss:0.345364
+701it [04:16, 3.09it/s]train loss:0.915476
+751it [04:31, 3.46it/s]train loss:0.225480
+801it [04:44, 4.22it/s]train loss:0.133355
+851it [04:57, 3.40it/s]train loss:0.383785
+901it [05:08, 4.53it/s]train loss:0.736109
+925it [05:11, 2.97it/s]
+['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病pro量表评估患者的脾胃功能并与健康成人进行对照', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟悉症状的机制的理解很差', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚lr􀒼􀊚cc，遗传性平滑肌瘤病和肾细胞癌）', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹疼痛等,或者日常活动中发生的钝痛或者隐痛']
+BLEU:0.912650
+85
+1it [00:00, 2.06it/s]train loss:0.157743
+51it [00:22, 2.43it/s]train loss:0.636225
+101it [00:42, 2.46it/s]train loss:0.616602
+151it [01:02, 2.60it/s]train loss:0.652693
+201it [01:21, 2.57it/s]train loss:0.474709
+251it [01:41, 2.60it/s]train loss:0.226971
+301it [02:00, 2.71it/s]train loss:0.191762
+351it [02:18, 2.64it/s]train loss:0.226605
+401it [02:36, 2.83it/s]train loss:0.258763
+451it [02:54, 2.76it/s]train loss:0.182351
+501it [03:12, 2.92it/s]train loss:0.307130
+551it [03:29, 2.81it/s]train loss:0.408647
+601it [03:46, 3.04it/s]train loss:1.082845
+651it [04:02, 3.32it/s]train loss:0.359538
+701it [04:18, 3.01it/s]train loss:0.948452
+751it [04:32, 3.60it/s]train loss:0.407123
+801it [04:46, 4.19it/s]train loss:0.189554
+851it [04:59, 3.50it/s]train loss:0.594122
+901it [05:10, 4.38it/s]train loss:0.466699
+925it [05:13, 2.95it/s]
+0it [00:00, ?it/s]['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病pro量表评估患者的脾胃功能并与健康成人进行对照', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟悉症状的机制的理解很差', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚lr􀒼􀊚cc，遗传性平滑肌瘤病和肾细胞癌）', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹疼痛等,
+或者日常活动中发生的钝痛或者隐痛']
+BLEU:0.912396
+85
+1it [00:00, 2.05it/s]train loss:0.154188
+51it [00:21, 2.31it/s]train loss:0.146629
+101it [00:42, 2.47it/s]train loss:0.756329
+151it [01:02, 2.60it/s]train loss:0.634626
+201it [01:22, 2.38it/s]train loss:0.144051
+251it [01:41, 2.61it/s]train loss:0.667737
+301it [02:00, 2.69it/s]train loss:0.588777
+351it [02:19, 2.73it/s]train loss:0.625895
+401it [02:37, 2.83it/s]train loss:1.107275
+451it [02:55, 2.90it/s]train loss:0.598046
+501it [03:12, 2.80it/s]train loss:0.155461
+551it [03:29, 2.92it/s]train loss:1.109905
+601it [03:46, 2.93it/s]train loss:1.064294
+651it [04:01, 3.39it/s]train loss:0.349201
+701it [04:17, 3.12it/s]train loss:0.958062
+751it [04:31, 3.61it/s]train loss:0.443409
+801it [04:45, 4.20it/s]train loss:0.231794
+851it [04:57, 3.46it/s]train loss:0.374449
+901it [05:08, 4.27it/s]train loss:0.468374
+925it [05:11, 2.97it/s]
+['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病pro量表评估患者的脾胃功能并与健康成人进行对照', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟悉症状的机制的理解很差', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚lr􀒼􀊚cc，遗传性平滑肌瘤病和肾细胞癌）', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹疼痛等,或者日常活动中发生的钝痛或者隐痛']
+BLEU:0.909719
+85
+1it [00:00, 2.28it/s]train loss:0.641373
+51it [00:22, 2.42it/s]train loss:0.656435
+101it [00:42, 2.50it/s]train loss:0.752675
+151it [01:02, 2.50it/s]train loss:0.210260
+201it [01:22, 2.53it/s]train loss:0.531659
+251it [01:41, 2.63it/s]train loss:0.894049
+301it [02:00, 2.66it/s]train loss:0.181648
+351it [02:18, 2.57it/s]train loss:0.209180
+401it [02:37, 2.68it/s]train loss:0.250434
+451it [02:54, 2.96it/s]train loss:0.526951
+501it [03:12, 2.77it/s]train loss:0.160573
+551it [03:29, 2.85it/s]train loss:0.403653
+601it [03:46, 2.82it/s]train loss:0.409452
+651it [04:02, 3.36it/s]train loss:0.346804
+701it [04:17, 3.27it/s]train loss:0.960380
+751it [04:32, 3.51it/s]train loss:0.370652
+801it [04:46, 4.40it/s]train loss:0.130828
+851it [04:58, 3.60it/s]train loss:0.563545
+901it [05:09, 4.66it/s]train loss:0.705219
+925it [05:12, 2.96it/s]
+['方法:随机对200例耳鸣患者的脾胃系疾病患病情况及生活习惯进行调查,应用脾胃系疾病pro量表评估患者的脾胃功能并与健康成人进行对照', '这些疾病是通过症状诊断的，治疗主要是对症的，但是与所涉及病毒的分子生物学方面的知识相比，我们对产生熟悉症状的机制的理解很差', '必须定期筛查所有已证实具有突变的患者及其家人，以寻找相关的肿瘤，特别是乳头状肾细胞癌（h􀒼􀊚lr􀒼􀊚cc，遗传性平滑肌瘤病和肾细胞癌）', '本文对我国高校结核病疫情现状以及高校大学生对结核病的认知、态度和行为水平及健康促进活动在结核病防治工作中的应用现状进行阐述', '肾结石较为严重时会给患者带来诸多痛苦,例如剧烈的腰腹疼痛等,或者日常活动中发生的钝痛或者隐痛']
+BLEU:0.911332
+85
+Train finished
+Best Val BLEU:0.917478
+Test BLEU:0.916418
+finish
+Process finished with exit code 0

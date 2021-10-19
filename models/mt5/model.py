@@ -21,6 +21,7 @@ def build(batch_size, cuda):
     x = import_module('config')
     pretrained_model = 'google/mt5-small'
     config = x.Config(batch_size, pretrained_model)
+    test_config = x.Config(batch_size*4, pretrained_model)
     train_data = build_dataset(config, './data/train/src_ids.pkl', './data/train/src_masks.pkl',
                                './data/train/tar_ids.pkl',
                                './data/train/tar_masks.pkl', './data/train/tar_txts.pkl')
@@ -31,8 +32,8 @@ def build(batch_size, cuda):
                              './data/valid/tar_ids.pkl',
                              './data/valid/tar_masks.pkl', './data/valid/tar_txts.pkl')
     train_dataloader = build_iterator(train_data, config)
-    val_dataloader = build_iterator(val_data, config)
-    test_dataloader = build_iterator(test_data, config)
+    val_dataloader = build_iterator(val_data, test_config)
+    test_dataloader = build_iterator(test_data, test_config)
 
     model = MT5ForConditionalGeneration.from_pretrained(pretrained_model)
     model = model.to(config.device)
@@ -51,14 +52,14 @@ def eval_set(model, dataloader, config):
     results = []
     references = []
 
-    for i, (batch_src, batch_tar, batch_tar_txt) in enumerate(dataloader):
+    for i, (batch_src, batch_tar, batch_tar_txt) in enumerate(tqdm(dataloader)):
         with torch.no_grad():
-            outputs = model.generate(batch_src[0])
-            results += [config.tokenizer.decode(u, skip_special_tokens=True) for u in outputs]
+            outputs = model.generate(input_ids=batch_src[0],attention_mask=batch_src[2],do_sample=False,max_length=config.pad_size)
+            results += config.tokenizer.batch_decode(outputs,skip_special_tokens=True)
             references += batch_tar_txt
+
     references = [[u] for u in references]
     tmp = copy.deepcopy(references)
-    results = [u.replace('▁','') for u in results]
     bleu = count_score(results, tmp, config)
     del tmp
 
@@ -66,6 +67,7 @@ def eval_set(model, dataloader, config):
     for words in results:
         tmp = ''
         for word in words:
+            if word=='▁': continue
             tmp += word
         sentences.append(tmp)
     model.train()
