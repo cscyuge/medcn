@@ -88,7 +88,7 @@ def train(model, optimizer, train_dataloader, val_dataloader, test_dataloader, c
             optimizer.step()
             optimizer.zero_grad()
 
-            if i % 500 == 0:
+            if i % 1000 == 0:
                 print('train loss:%f' %loss.item())
 
 

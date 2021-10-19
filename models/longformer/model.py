@@ -541,7 +541,7 @@ def train(model, optimizer, scheduler, train_dataloader, val_dataloader, test_da
             scheduler.step()
             optimizer.zero_grad()
 
-            if i % 50 == 0:
+            if i % 2000 == 0:
                 # print('sample:')
                 # print(words_1)
                 # print(words_2)
@@ -583,5 +583,5 @@ def main():
 
 if __name__ == '__main__':
     import os
-    os.environ['CUDA_VISIBLE_DEVICES'] = '3'
+    os.environ['CUDA_VISIBLE_DEVICES'] = '1'
     main()
