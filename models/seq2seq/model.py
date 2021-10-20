@@ -573,6 +573,7 @@ def train(model, optimizer, scheduler, train_dataloader, val_dataloader, test_da
     print('Train finished')
     print('Best Val BLEU:%f' %(save_file_best['best_bleu']))
     model.load_state_dict(save_file_best['para'])
+
     test_results, bleu = eval_set(model, test_dataloader, config)
     print('Test BLEU:%f' % (bleu))
     with open('./result/best_save_bert.out.txt', 'w', encoding="utf-8") as f:

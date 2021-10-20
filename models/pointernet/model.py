@@ -162,6 +162,11 @@ class PointerNet(nn.Module):
     def forward(self, batch_src, batch_tar=None):
         batch_size = batch_src[0].size(0)
         pad_size = batch_src[0].size(1)
+        if batch_tar is None:
+            max_len = self.config.pad_size
+        else:
+            max_len = batch_tar[0].size(1)
+
         if batch_tar is not None:
             target = batch_tar[0]
         encoder_out, encoder_hidden = self.encoder(batch_src[0])
@@ -173,11 +178,13 @@ class PointerNet(nn.Module):
         seq_loss = 0
         step_coverage_loss = 0
         sentence_symbols = []
-        for i in range(pad_size):
+        decoder_outputs = []
+        for i in range(max_len):
             decoder_output, decoder_hidden, z, attn, coverage = self.decoder(len(self.config.tokenizer.vocab),decoder_input, decoder_hidden,
                                                                               encoder_out, z, batch_src[0], coverage)
             symbols = torch.max(decoder_output, 1)[1].cpu().tolist()
             sentence_symbols.append(symbols)
+            decoder_outputs.append(decoder_output.squeeze(1))
 
             if batch_tar is None or random.randint(1, 10) > 5:
                 _, decoder_input = torch.max(decoder_output, 1)
@@ -188,10 +195,10 @@ class PointerNet(nn.Module):
             if batch_tar is not None:
                 step_coverage_loss = torch.sum(torch.min(attn.reshape(-1, 1), coverage.reshape(-1, 1)), 1)
                 step_coverage_loss = torch.sum(step_coverage_loss)
-                seq_loss += (self.criterion(decoder_output, target[:, i]))
+                seq_loss += (self.criterion(decoder_output, target[:,i]))
                 seq_loss += step_coverage_loss
 
-        return seq_loss, step_coverage_loss, sentence_symbols
+        return seq_loss, sentence_symbols
 
 
 def build(hidden_size, batch_size, cuda=True):
@@ -222,13 +229,8 @@ def build(hidden_size, batch_size, cuda=True):
         pointerNet.cuda()
     pointerNet = pointerNet.to(config.device)
     optimizer = torch.optim.Adam(pointerNet.parameters(), lr=config.learning_rate)
-    t_total = int(len(train_data) / config.batch_size * config.num_epochs)
-    scheduler = get_linear_schedule_with_warmup(optimizer,
-                                                num_warmup_steps=int(config.warmup_proportion * t_total),
-                                                num_training_steps=t_total)  # PyTorch scheduler
 
-
-    return pointerNet, optimizer, scheduler, train_dataloader, val_dataloader, test_dataloader, config
+    return pointerNet, optimizer, train_dataloader, val_dataloader, test_dataloader, config
 
 
 def decode_sentence(symbols, config):
@@ -237,6 +239,8 @@ def decode_sentence(symbols, config):
         words = config.tokenizer.convert_ids_to_tokens(symbol_sen)
         temp = ''
         for word in words:
+            if word == '[CLS]':
+                continue
             if word == '[SEP]':
                 break
             if word[0] == '#':
@@ -255,7 +259,7 @@ def eval_set(model, dataloader, config):
 
     for i, (batch_src, batch_tar, batch_tar_txt) in enumerate(dataloader):
         with torch.no_grad():
-            seq_loss, step_coverage_loss, sentence_symbols = model(batch_src, None)
+            loss, sentence_symbols = model(batch_src, None)
             symbols = np.array(sentence_symbols).T
             sentences = decode_sentence(symbols, config)
             results += sentences
@@ -275,7 +279,7 @@ def eval_set(model, dataloader, config):
     return sentences, bleu
 
 
-def train(model, optimizer, scheduler, train_dataloader, val_dataloader, test_dataloader, config):
+def train(model, optimizer, train_dataloader, val_dataloader, test_dataloader, config):
     #training steps
     max_bleu = -99999
     save_file = {}
@@ -284,18 +288,16 @@ def train(model, optimizer, scheduler, train_dataloader, val_dataloader, test_da
         for i, (batch_src, batch_tar, batch_tar_txt) in tqdm(enumerate(train_dataloader)):
             # words_1 = ''.join(config.tokenizer.convert_ids_to_tokens(batch_src[0][0]))
             # words_2 = ''.join(config.tokenizer.convert_ids_to_tokens(batch_tar[0][0]))
-            seq_loss, step_coverage_loss, sentence_symbols = model(batch_src, batch_tar)
-
-            seq_loss.backward()
+            loss, sentence_symbols = model(batch_src, batch_tar)
+            loss.backward()
             optimizer.step()
-            scheduler.step()
             optimizer.zero_grad()
 
             if i % 50 == 0:
                 # print('sample:')
                 # print(words_1)
                 # print(words_2)
-                print('train loss:%f' %(seq_loss.item()/len(batch_src[0][0])/len(batch_src[0])))
+                print('train loss:%f' %(loss.item()/batch_tar[0].size(0)/batch_tar[0].size(1)))
 
 
         if e >= 0:
@@ -325,8 +327,8 @@ def train(model, optimizer, scheduler, train_dataloader, val_dataloader, test_da
     return bleu
 
 def main():
-    seq2seq, optimizer,scheduler, train_dataloader, val_dataloader, test_dataloader, config = build(256, 128, True)
-    bleu = train(seq2seq, optimizer, scheduler, train_dataloader, val_dataloader, test_dataloader, config)
+    seq2seq,scheduler, train_dataloader, val_dataloader, test_dataloader, config = build(256, 128, True)
+    bleu = train(seq2seq, scheduler, train_dataloader, val_dataloader, test_dataloader, config)
     print('finish')
 
 

@@ -8,7 +8,7 @@ from utils.bleu_eval import count_score
 from keras.preprocessing.sequence import pad_sequences
 import numpy as np
 from model import build
-
+from utils.generator import generate_paragraph_data
 
 def main():
     model, optimizer, train_dataloader, val_dataloader, test_dataloader, config = build(64, True)
@@ -17,15 +17,18 @@ def main():
 
     model.load_state_dict(save_file_best['para'])
     model.eval()
+    generate_paragraph_data('../../data/test', '../../data/paragraph-level/data/test', config.tokenizer)
 
-    val_data = build_dataset(config, '../longformer/data/valid/src_ids.pkl', '../longformer/data/valid/src_masks.pkl',
-                             '../longformer/data/valid/tar_ids.pkl',
-                             '../longformer/data/valid/tar_masks.pkl', '../longformer/data/valid/tar_txts.pkl')
+    test_data = build_dataset(config, '../../data/paragraph-level/data/test/src_ids.pkl',
+                              '../../data/paragraph-level/data/test/src_masks.pkl',
+                              '../../data/paragraph-level/data/test/tar_ids.pkl',
+                              '../../data/paragraph-level/data/test/tar_masks.pkl',
+                              '../../data/paragraph-level/data/test/tar_txts.pkl')
 
     max_len = 64
     outs = []
     tars = []
-    for token_ids_src, _, seq_len_src, mask_src, token_ids_tar, __, seq_len_tar, mask_tar, tar_txt in tqdm(val_data):
+    for token_ids_src, _, seq_len_src, mask_src, token_ids_tar, __, seq_len_tar, mask_tar, tar_txt in tqdm(test_data):
         src = ''.join(config.tokenizer.convert_ids_to_tokens(token_ids_src))
         src = src.replace('[CLS]', '').replace('[SEP]', '').replace('[PAD]', '')
         tar = []
@@ -69,7 +72,10 @@ def main():
 
     with open('./result/paragraph_out.txt', 'w', encoding='utf-8') as f:
         f.writelines([u + '\n' for u in outs])
-
+    with open('./result/paragraph_out.pkl','wb') as f:
+        pickle.dump(outs,f)
+    with open('./result/paragraph_ref.pkl', 'wb') as f:
+        pickle.dump(tars, f)
     references = [[u] for u in tars]
     tmp = copy.deepcopy(references)
     bleu = count_score(outs, tmp, config)
@@ -81,3 +87,15 @@ if __name__ == '__main__':
 
     os.environ['CUDA_VISIBLE_DEVICES'] = '0'
     main()
+    with open('./result/paragraph_out.pkl', 'rb') as f:
+        outs = pickle.load(f)
+    with open('./result/paragraph_ref.pkl', 'rb') as f:
+        refs = pickle.load(f)
+    outs = [' '.join(u) for u in outs]
+    refs = [' '.join(u) for u in refs]
+
+    from rouge import Rouge
+    rouge = Rouge()
+    scores = rouge.get_scores(outs, refs, avg=True)
+    from pprint import pprint
+    pprint(scores)

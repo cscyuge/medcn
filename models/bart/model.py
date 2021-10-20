@@ -75,35 +75,35 @@ def train(model, optimizer, train_dataloader, val_dataloader, test_dataloader, c
     #training steps
     max_bleu = -99999
     save_file = {}
-    for e in range(config.num_epochs):
-        model.train()
-        for i, (batch_src, batch_tar, batch_tar_txt) in tqdm(enumerate(train_dataloader)):
-            model_outputs = model(input_ids=batch_src[0], attention_mask=batch_src[2], labels=batch_tar[0])
-
-            loss = model_outputs.loss
-            loss.backward()
-            optimizer.step()
-            optimizer.zero_grad()
-
-            if i % 50 == 0:
-                print('train loss:%f' %loss.item())
-
-
-        #validation steps
-        if e >= 0:
-            val_results, bleu = eval_set(model, val_dataloader, config)
-            print(val_results[0:5])
-            print('BLEU:%f' %(bleu))
-            if bleu > max_bleu:
-                max_bleu = bleu
-                save_file['epoch'] = e + 1
-                save_file['para'] = model.state_dict()
-                save_file['best_bleu'] = bleu
-                torch.save(save_file, './cache/best_save.data')
-            if bleu < max_bleu - 0.6:
-                print('Early Stop')
-                break
-            print(save_file['epoch'] - 1)
+    # for e in range(config.num_epochs):
+    #     model.train()
+    #     for i, (batch_src, batch_tar, batch_tar_txt) in tqdm(enumerate(train_dataloader)):
+    #         model_outputs = model(input_ids=batch_src[0], attention_mask=batch_src[2], labels=batch_tar[0])
+    #
+    #         loss = model_outputs.loss
+    #         loss.backward()
+    #         optimizer.step()
+    #         optimizer.zero_grad()
+    #
+    #         if i % 50 == 0:
+    #             print('train loss:%f' %loss.item())
+    #
+    #
+    #     #validation steps
+    #     if e >= 0:
+    #         val_results, bleu = eval_set(model, val_dataloader, config)
+    #         print(val_results[0:5])
+    #         print('BLEU:%f' %(bleu))
+    #         if bleu > max_bleu:
+    #             max_bleu = bleu
+    #             save_file['epoch'] = e + 1
+    #             save_file['para'] = model.state_dict()
+    #             save_file['best_bleu'] = bleu
+    #             torch.save(save_file, './cache/best_save.data')
+    #         if bleu < max_bleu - 0.6:
+    #             print('Early Stop')
+    #             break
+    #         print(save_file['epoch'] - 1)
 
 
     save_file_best = torch.load('./cache/best_save.data')

@@ -256,7 +256,7 @@ class DecoderRNN(BaseRNN):
             self.attention = Attention(self.hidden_size)
 
         self.out = nn.Linear(self.hidden_size, self.output_size)
-        self.hidden_change = nn.Linear(768, self.hidden_size)
+        self.hidden_change = nn.Linear(self.hidden_size, self.hidden_size)
 
     def forward_step(self, input_var, hidden, encoder_outputs, function):
         batch_size = input_var.size(0)
@@ -448,9 +448,9 @@ def build(hidden_size, batch_size, cuda):
     val_data = build_dataset(config, './data/valid/src_ids.pkl', './data/valid/src_masks.pkl',
                              './data/valid/tar_ids.pkl',
                              './data/valid/tar_masks.pkl', './data/valid/tar_txts.pkl')
-    train_dataloader = build_iterator(train_data, config)
-    val_dataloader = build_iterator(val_data, config)
-    test_dataloader = build_iterator(test_data, config)
+    train_dataloader = build_iterator(train_data[:10], config)
+    val_dataloader = build_iterator(val_data[:10], config)
+    test_dataloader = build_iterator(test_data[:10], config)
 
     encoder = x.Model(config).to(config.device)
     decoder = DecoderRNN(len(config.tokenizer.vocab), config.pad_size, hidden_size * 2 if bidirectional else hidden_size,
@@ -541,7 +541,7 @@ def train(model, optimizer, scheduler, train_dataloader, val_dataloader, test_da
             scheduler.step()
             optimizer.zero_grad()
 
-            if i % 2000 == 0:
+            if i % 500 == 0:
                 # print('sample:')
                 # print(words_1)
                 # print(words_2)

@@ -15,7 +15,7 @@ class Config(object):
         self.num_epochs = 100                                            # epoch数
         self.batch_size = batch_size                                       # mini-batch大小
         self.pad_size = 512                                            # 每句话处理成的长度(短填长切)
-        self.learning_rate = 5e-5                                       # 学习率
+        self.learning_rate = 1e-5                                       # 学习率
         self.warmup_proportion = 0.03
         self.bert_path = bert_path
 

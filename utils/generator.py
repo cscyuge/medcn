@@ -7,23 +7,25 @@ from transformers import BertTokenizer
 from keras.preprocessing.sequence import pad_sequences
 import os
 
-
-def tokenize(tokenizer, txt):
+def tokenize(tokenizer, txt, mt5=False):
     src = re.sub('\*\*', '', txt).lower()
     tokens = tokenizer.tokenize(src)
-    tokens = ['[CLS]'] + tokens + ['[SEP]']
+    if mt5:
+        tokens = ['▁'] + tokens + ['</s>']
+    else:
+        tokens = [tokenizer.cls_token] + tokens + [tokenizer.sep_token]
     ids = tokenizer.convert_tokens_to_ids(tokens)
     return ids
 
 
-def preprocess(path_from, path_to, tokenizer):
+def generate_paragraph_data(path_from, path_to, tokenizer, mt5=False):
     with open(os.path.join(path_from,'dataset.pkl'), 'rb') as f:
         dataset = pickle.load(f)
     src_all = [u[0] for u in dataset]
     tar_all = [u[1] for u in dataset]
 
-    src_ids = [tokenize(tokenizer, u) for u in src_all]
-    tar_ids = [tokenize(tokenizer, u) for u in tar_all]
+    src_ids = [tokenize(tokenizer, u, mt5) for u in src_all]
+    tar_ids = [tokenize(tokenizer, u, mt5) for u in tar_all]
     print(len(src_ids))
     src_ids_smaller = []
     tar_ids_smaller = []
@@ -62,22 +64,3 @@ def preprocess(path_from, path_to, tokenizer):
         pickle.dump(tar_masks, f)
     with open(os.path.join(path_to, 'tar_txts.pkl'), 'wb') as f:
         pickle.dump(tar_txts, f)
-
-
-def main():
-    bert_model = 'schen/longformer-chinese-base-4096'
-    tokenizer = BertTokenizer.from_pretrained(bert_model)
-    print('train dataset:')
-    preprocess('../../data/train', './data/train',tokenizer)
-    print('test dataset:')
-    preprocess('../../data/test', './data/test',tokenizer)
-    print('valid dataset:')
-    preprocess('../../data/valid', './data/valid',tokenizer)
-
-if __name__ == '__main__':
-    main()
-    # with open('./data/train/src_ids.pkl','rb') as f:
-    #     src_ids = pickle.load(f)
-    # print(len(src_ids['pad']))
-
-
