@@ -12,10 +12,10 @@ from model import build
 
 
 def main():
-    model, optimizer, scheduler, train_dataloader, val_dataloader, test_dataloader, loss_fun, config = build(256, 64,
-                                                                                                             True, True)
+    model, optimizer, scheduler, train_dataloader, val_dataloader, test_dataloader, loss_fun, config = build(768, 4,
+                                                                                                             True)
 
-    save_file_best = torch.load('./cache/best_save.data', map_location={'cuda:0': 'cuda:0'})
+    save_file_best = torch.load('./cache/best_save.data', map_location={'cuda:1': 'cuda:0'})
 
     model.load_state_dict(save_file_best['para'])
     model.eval()

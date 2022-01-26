@@ -8,7 +8,9 @@ import numpy as np
 import torch
 
 def build_dataset(config, src_ids_path, src_masks_path, tar_ids_path, tar_masks_path, tar_txt_path):
-    token_ids_srcs = pickle.load(open(src_ids_path, 'rb'))['pad']
+    token_ids_srcs = pickle.load(open(src_ids_path, 'rb'))
+    if isinstance(token_ids_srcs, dict):
+        token_ids_srcs = token_ids_srcs['pad']
     seq_len_srcs = len(token_ids_srcs[0]) - np.sum(token_ids_srcs==0, axis=1)
     arg_index = np.argsort(-seq_len_srcs)
     mask_srcs = pickle.load(open(src_masks_path, 'rb'))
@@ -16,7 +18,9 @@ def build_dataset(config, src_ids_path, src_masks_path, tar_ids_path, tar_masks_
     seq_len_srcs = seq_len_srcs[arg_index]
     mask_srcs = np.array(mask_srcs)[arg_index]
 
-    token_ids_tars = pickle.load(open(tar_ids_path, 'rb'))['pad']
+    token_ids_tars = pickle.load(open(tar_ids_path, 'rb'))
+    if isinstance(token_ids_tars, dict):
+        token_ids_tars = token_ids_tars['pad']
     seq_len_tars = len(token_ids_tars[0]) - np.sum(token_ids_tars==0, axis=1)
     mask_tars = pickle.load(open(tar_masks_path,'rb'))
     token_ids_tars = np.array(token_ids_tars)[arg_index]

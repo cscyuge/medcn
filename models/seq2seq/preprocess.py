@@ -21,8 +21,8 @@ def preprocess(path_from, path_to):
         dataset_aligned = pickle.load(f)
     src_all, tar_all = [], []
     for data in dataset_aligned:
-        src_all.extend(data[0].split('。'))
-        tar_all.extend(data[1].split('。'))
+        src_all.extend(data[0])
+        tar_all.extend(data[1])
 
     bert_model = 'hfl/chinese-bert-wwm-ext'
     tokenizer = BertTokenizer.from_pretrained(bert_model)
@@ -31,7 +31,7 @@ def preprocess(path_from, path_to):
     print(len(src_ids))
     src_ids_smaller, tar_ids_smaller = [], []
     tar_txts = []
-    max_len = 64
+    max_len = 256
     for src, tar, txt in zip(src_ids, tar_ids, tar_all):
         if len(src) < max_len and len(tar) < max_len and len(src) > 2 and len(tar) > 2:
             src_ids_smaller.append(src)
